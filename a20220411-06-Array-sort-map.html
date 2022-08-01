@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+    <!-- 4/11 ⌚ 11:53-12:00 -->
+    <!-- 把早上教的用MAP改寫 -->
+    
+    <body>
+        <div class="info">
+            <button onclick="sortByAge()">依年齡排序</button>
+            <br />
+            <button onclick="sortByName()">依名字排序</button>
+
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Job</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const tbody = document.querySelector('tbody');
+            const data = [
+                {
+                    name: "Sam",
+                    age: 38,
+                    job: "student",
+                },
+                {
+                    name: "John",
+                    age: 30,
+                    job: "teacher",
+                },
+                {
+                    name: "johnny",
+                    age: 19,
+                    job: "student",
+                },
+                {
+                    name: "Mary",
+                    age: 20,
+                    job: "teacher",
+                },
+            ];
+
+            function renderTable(){
+
+                tbody.innerHTML = data.map(function(v){
+                    return  `
+                        <tr>
+                            <td>${v.name}</td>
+                            <td>${v.age}</td>
+                            <td>${v.job}</td>
+                        </tr>`;
+                }).join('');
+            }
+            renderTable();
+
+
+
+
+            function sortByAge() {
+                data.sort(function (a, b) {
+                    return a.age - b.age;
+                });
+                console.log(data);
+                renderTable();
+            }
+
+            function sortByName() {
+                data.sort(function (a, b) {
+                    return a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1; // 字母由小到大
+                });
+                console.log(data);
+                renderTable();
+            }
+        </script>
+    </body>
+</html>

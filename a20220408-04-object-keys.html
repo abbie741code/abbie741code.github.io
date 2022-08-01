@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+         <!-- 4/8 ⌚ 10:35-10:45 -->
+         <!-- 陷阱題 -->
+    </head>
+    <body>
+        <div class="info">1</div>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const n = "gender";
+
+            const p1 = {
+                name: "Shin",
+                age: 32,
+                [n]: "男生",
+            };
+            console.log(p1);
+
+            const a = { v: 1 };
+            const b = { v: 2 };
+
+            p1[a] = 100; // p1['[object Object]']
+            p1[b] = 300;
+
+            console.log(p1[a]); // 會拿到什麼?
+        </script>
+    </body>
+</html>

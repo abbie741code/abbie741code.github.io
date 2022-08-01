@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0707- HTML-DOM 網頁頁面操作 標籤操作</title>
+    practice
+</head>
+
+<body>
+    <span onclick="changeToAbout();">About me</span>
+    <span onclick="changeToBreed();"> 品種</span>
+    <hr>
+    <div id="about">大家好 我是米寶</div>
+    <div id="breed" style="display:none;">我是一隻狐狸博美 我長得很可愛</div>
+
+    <script>
+        function changeToAbout(){
+            // 先取得要操作的標籤
+            let aboutDiv = document.querySelector("#about");
+            let breedDiv = document.querySelector("#breed");
+             // 在對標籤做操作
+             aboutDiv.style.display="block";
+             breedDiv.style.display="none";
+        }
+
+        function changeToBreed(){
+            let aboutDiv = document.querySelector("#about");
+            let breedDiv = document.querySelector("#breed");
+
+            aboutDiv.style.display = "none";
+            breedDiv.style.display="block";
+
+            
+        
+        }
+    </script>
+
+   
+
+</body>
+
+</html>

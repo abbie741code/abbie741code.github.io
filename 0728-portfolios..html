@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0728 交錯漂浮版</title>
+
+    <!-- 套用fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 套用Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.c        om">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Square+Peg&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            /* outline: 1px solid red; */
+            font-family: 'Noto Sans TC', sans-serif;
+            color: rgb(68, 62, 61);
+        }
+
+        body {
+            padding: 100px 0;
+
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            background-color: rgb(12, 64, 64);
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: auto;
+            /* outline: 5px solid rgb(18, 123, 176); */
+
+        }
+
+        /* 標題字體設定 */
+        h1 {
+            text-align: center;
+            font-size: 100px;
+            margin-bottom: 40px;
+            font-family: 'Chewy', cursive;
+            font-family: 'Square Peg', cursive;
+            font-weight: 900;
+        }
+
+        /* 字符樣式 */
+        .title span {
+            cursor: pointer;
+            display: inline-block;
+            transition: .3s ease;
+            font-family: 'Chewy', cursive;
+            font-family: 'Square Peg', cursive;
+            font-weight: 900;
+        }
+
+        /* hover效果 */
+        .title span:hover {
+            transform: translateY(-20px) rotate(15deg) scale(1.2);
+            font-family: 'Chewy', cursive;
+            font-family: 'Square Peg', cursive;
+            font-weight: 900;
+        }
+
+
+
+        .item {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            margin-bottom: 70px;
+            /* background-color: rgb(171, 175, 175); */
+
+        }
+
+        .item h2 {
+            font-weight: 900;
+            font-size: 32px;
+        }
+
+        .item p {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .item .pic {
+            width: 55%;
+            /* background-color: rgb(187, 222, 200); */
+            flex-shrink: 0;
+            /* ⭐️ 圖片置中 */
+            background-position: center center;
+            background-size: cover;
+
+            overflow: hidden;
+
+        }
+
+        /* ⭐️ 要用 vertical-align: middle;才不會有奇怪縫隙 */
+        .item .pic img {
+            width: 100%;
+            height: 400px;
+            vertical-align: middle;
+            transform: scale(1, 1);
+            transition: all 1s ease-out;
+        }
+
+        .item .pic:hover img {
+
+            transform: scale(1.2, 1.2);
+
+        }
+
+
+        .item .txt {
+            width: 55%;
+            /* background-color:#bfc9d7; */
+            flex-shrink: 0;
+            padding: 40px 30px;
+            /* 加了 box-sizing: border-box原本爆版的地方都變正常了 */
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+
+
+        }
+
+        .txt h2 {
+            margin-bottom: 15px;
+        }
+
+        /*  ⭐️ “>“ ----> 代表我要選取到第一層物件(不會到孫子) */
+        .item > :first-child {
+            margin-right: -3%;
+
+        }
+
+        .item:nth-child(1) .txt {
+            background-color: rgba(35, 174, 184);
+        }
+
+        .item:nth-child(2) .txt {
+            background-color: rgba(193, 179, 218);
+        }
+
+        .item:nth-child(3) .txt {
+            background-color: rgba(168, 135, 135);
+        }
+
+        .item:nth-child(4) .txt {
+            background-color: rgba(177, 186, 199);
+        }
+
+        .item:nth-child(5) .txt {
+            background-color: #f1eeef;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <h1 class="title">Abbie's &nbsp;  &nbsp; portfolios</h1>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <a href=" https://abbie741code.github.io/Gogoro/0306_final_GOGORO"><img src="/img/gogoro.jpeg"
+                        alt=""></a>
+
+            </div>
+            <div class="txt">
+
+                <h2> <i class="fa-solid fa-arrow-left-long"></i> 這是我的第一個作品-Gogoro切版</h2>
+                <p>模仿Gogoro官方網站做臨摹切版</p>
+
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="txt">
+                <h2> 這是我的第二個作品-愛毛孩園 <i class="fa-solid fa-arrow-right-long"></i> </h2>
+                <p>網站理念是希望可以有一個線上捐贈飼料與預約與認養毛孩見面的平台。
+                    相較於部分僅捐贈金錢而無後續追蹤的寵物平台，因此設計一個線上捐贈飼料、預約見面與認養的平台。</p>
+            </div>
+            <div class="pic">
+                <a href="https://abbie741code.github.io/dog-adopt/0401-dog-adopt.html"><img src="/img/web-home page.png"
+                        alt=""></a>
+            </div>
+
+        </div>
+
+        <div class="item">
+            <div class="pic">
+                <a href="https://abbie741code.github.io/Mate/Register_forget-password"><img src="/img/Mate首頁.png"
+                        alt=""></a>
+            </div>
+            <div class="txt">
+
+                <h2> <i class="fa-solid fa-arrow-left-long"></i> 這是團隊協作的專案</h2>
+                <p>工程師交友網站Mate</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="txt">
+                <h2>Behance作品集 <i class="fa-solid fa-arrow-right-long"></i> </h2>
+                <p>努力累積中</p>
+                <p>To be continue...</p>
+            </div>
+            <div class="pic">
+                <a href="https://www.behance.net/abbielin3"><img src="/img/resume-design.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="pic">
+                <a href="https://github.com/abbie741code"><img src="/img/github center.gif" alt=""></a>
+            </div>
+            <div class="txt">
+                <h2><i class="fa-solid fa-arrow-left-long"></i> 個人Github連結 </h2>
+                <p>To be continue...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 取出 .title 內的標題並代入函式中，使用展開運算子拆解文字成陣列 -->
+    <script>
+        const title = document.querySelector('.title');
+        const addSpan = (text) => [...text].map(letter => `<span>${letter}</span>`).join('');
+        addSpan(title.textContent);
+        title.innerHTML = addSpan(title.textContent);
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

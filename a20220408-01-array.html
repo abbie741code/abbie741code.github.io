@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+         <!-- 4/8 ⌚ 09:18-09:40 -->
+
+    </head>
+    <body>
+        <div class="rect"></div>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const ar = [2, 5, 7, 100, 32];
+
+            ar[9] = 99; // 原則上索引要連續
+            ar[-2] = -200; // 不要這樣用
+            ar["name"] = "hello"; // 不要這樣用
+
+            
+
+            // for迴圈
+            for (let i = 0; i < ar.length; i++) {
+                console.log(`${i}: ${ar[i]}`, typeof i);
+            }
+
+             // for in 迴圈
+            console.log(`------------------`);
+            for (let s in ar) {
+                console.log(`${s}: ${ar[s]}`, typeof s);
+            }
+        </script>
+    </body>
+</html>

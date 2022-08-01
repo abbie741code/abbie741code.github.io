@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="abc">abc</div>
+<div id="def">def</div>
+<div id="abc">abc</div> <!-- id 不要重複, 但在 JS 不算錯誤 -->
+<div id="abc">abc</div>
+
+
+    <script>
+        console.log(abc);
+        console.log(def);
+
+        console.log( document.getElementById('abc') ); // 只會拿到一個
+        console.log( document.getElementById('def') );
+        console.log( document.getElementsByTagName('div') );
+    </script>
+</body>
+</html>

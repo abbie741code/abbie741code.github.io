@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <div id="info"></div>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+
+            const ar = [];
+            for(let i=1; i<=42; i++){
+                ar.push(i);
+            }
+            info.innerHTML = ar.toString();
+
+            ar.sort(function(){
+                return Math.random()-.5;
+            });
+
+            info.innerHTML += '<br>' + ar.toString();
+
+        </script>
+    </body>
+</html>

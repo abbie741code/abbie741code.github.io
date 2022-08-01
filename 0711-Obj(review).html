@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 7/11 JS物件基礎</title>
+
+    <!-- https://www.youtube.com/watch?v=3WHc-Ed5yfI&t=907s -->
+    <!-- 物件.成員名稱 ＝資料 -->
+
+
+
+
+    
+
+
+</head>
+
+
+<body>
+    <script>
+
+    // let obj = new Object();
+    // obj.x = 3;  // 🌟 把3放進去把它創造出來👉建立物件
+    // obj.y = 4;
+    // // 🌟 把function放進去把它創造出來👉建立物件
+    // obj.show = function(){
+    //     console.log("hello")
+    // };
+
+    // // 🌟 使用物件 (就是不要寫等於)
+    // console.log(obj);
+    // console.log(obj.x + obj.y);
+    // obj.show();  // ()👉做函式的呼叫
+
+
+    </script>
+
+
+
+    <!--🌟 在物件的方法中 使用this 代表物件本身 -->
+    <script>
+        // let obj1 = new Object();
+        // obj1.a = 3;
+        // obj1.b = 4;
+        // obj1.show = function(){
+        //     console.log(this.a, this.b);
+        // };
+    </script>
+
+    <!-- 🌟 json 物件表示法 -->
+    <!-- <script>
+        let obj1={};
+        let obj2={
+            x:3,
+            y:4,
+            show:function(){
+                console.log(this.x, this.y);
+            }
+        };
+
+    </script> -->
+
+
+       <!-- 🌟練習 -->
+    <script>
+        // 建議物件
+        let man= new Object(); // ❤️ 建立空白物件 new Object()
+        man.age = 18;  // ❤️ 物件.成員名稱＝資料
+        man.name = "米寶";
+        man.talk=function(){
+            console.log("hiiiiii");
+        };
+        //talk是一個function
+
+
+
+        // 使用物件 
+        console.log(man);
+        console.log(man.age > 20);// ❤️ 物件.成員名稱
+        man.talk(); 
+        // 呼叫函示 👉(呼叫物件的方法)
+
+
+
+    </script>
+ 
+
+</body>
+
+</html>

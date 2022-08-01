@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- 4/6 ⌚ 10:50-11:00 -->
+</head>
+<body>
+    <div class="abc">1</div>
+
+    <script>
+        let a = 5;
+        let b = a;
+
+        b = 10;
+        console.log(a, b);
+
+        // 參照設定
+        const el = document.querySelector('.abc');
+        // 參照設定
+        const el2 = el;
+
+        el2.innerHTML = '<h2>Hello</h2>';
+
+
+    </script>
+</body>
+</html>

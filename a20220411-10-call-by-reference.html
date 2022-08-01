@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+     <!-- 4/11 ⌚ 15:10-15:24  -->
+     <!-- 完全狀況外 ????? -->
+    <body>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const ar = [1, 2, 3];
+            let n = 1;
+
+            function func(a, b){
+                a.push(b);
+            }
+            function func3(a, b){
+                a.unshift(b);
+                return a;
+            }
+
+            function func2(m){
+                m++;
+            }
+            
+            func(ar, 10);
+            const br = func3(ar, 20);
+            console.log({br});
+            func2(n);
+
+            console.log(ar);
+            console.log({n});
+
+
+        </script>
+    </body>
+</html>

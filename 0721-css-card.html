@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7/21 互動式卡片切版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+
+            /* outline: 1px solid sandybrown; */
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background: rgb(123, 128, 151);
+        }
+
+        .wrap {
+            /* outline: 5px solid rgb(41, 57, 52); */
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+
+        .item {
+            width: 368px;
+            margin: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+
+            transform: translateY(0px);
+            transition: .5s;
+        }
+
+        .item img {
+            width: 100%;
+            /*⚠️ 有一個詭異空間,待研究 */
+            vertical-align: middle;
+        }
+
+        .item h2 {
+            border-bottom: 1px solid #888;
+            padding-bottom: .3rem;
+            margin-bottom: .4rem;
+            font-weight: 900;
+            font-size: 30px;
+            /* 加上漸變動畫 */
+            transition: .3s;
+        }
+
+        .item p {
+            line-height: 1.6;
+            font-weight: 300;
+            /* 加上漸變動畫 */
+            transition: .3s;
+        }
+
+        .item .text {
+            padding: 20px;
+            /* outline: 5px solid rgb(230, 34, 165); */
+            position: relative;
+
+        }
+
+        /* 偽類 */
+        .item .text:before {
+            content: '';
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            /* 三角形的斜度 */
+            border-top: 50px solid transparent;
+            /* item的一半 */
+            border-left: 184px solid #fff;
+            border-right: 184px solid #fff;
+            position: absolute;
+            transform: translateY(-100%);
+        }
+
+        .item:hover {
+            transform: translateY(-50px);
+        }
+
+        .item:hover .text {
+            background-image: linear-gradient(0deg, rgb(95, 103, 112), rgb(217, 226, 235))
+        }
+
+        /* item裡面的text要換色 */
+        .item:hover .text:before {
+            border-left: 184px solid rgb(217, 226, 235);
+            border-right: 184px solid rgb(217, 226, 235);
+        }
+
+        .item:hover h2 {
+            color: rgb(244, 245, 245);
+            border-bottom-color: rgb(244, 245, 245);
+
+        }
+
+        .item:hover p {
+            color: rgb(244, 245, 245);
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- 🌟 假圖製造: 直接打picsum -->
+    <!-- <img src="https://picsum.photos/id/684/1200/600" alt="">  -->
+
+    <!-- 🌟 多行修改快捷键： Mac : ⌘ command + ⇧ shift + L -->
+
+
+    <div class="wrap">
+        <!-- <div class="title"> 
+            <h1>台灣景點</h1>
+        </div> -->
+
+        <div class="item">
+            <img src="https://picsum.photos/id/670/300/300" alt="">
+            <div class="text">
+                <h2>士林夜市</h2>
+                <p>士林夜市為臺北市最具規模的夜市之一，以陽明戲院及慈誠宮為中心，包含了文林路、大東路、大南路等熱鬧街市集結而成，其中士林市場早在西元1910年即已興建，以各種傳統小吃聞名國內外，許多觀光客皆慕名而來，像是大餅包小餅、石頭火鍋或是士林大香腸等，更是已經成為美食地標，無人不曉。由於夜市鄰近許多學區，故以學生為主要的消費族群，價格也比一般商店便宜許多，例如家具、衣飾、相片沖印店或寵物用品等，都有其集散的區域，『情人巷』中的精品店與冰店，更是吸引了不少當地學子以外的顧客前往。像是大餅包小餅、石頭火鍋或是士林大香腸等，更是已經成為美食地標，無人更是吸引了不少當地學子以外的顧客前往。像是大餅包小餅、更是吸引了不少當地學子以外的顧客前往。像是大餅包小餅、更是吸引了不少當地學子以外的顧客前往。像是大餅包小餅、以外士林夜市為臺北市最具規模的夜市之一，以陽明戲院及慈誠。
+
+                   
+
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/681/300/300" alt="">
+            <div class="text">
+                <h2>台北101</h2>
+                <p>TAIPEI 101座落於台北最菁華地段，是國內建築界有史以來最大的工程專案。該專案主要由國內十四家企業共同組成的台北金融大樓股份有限公司，與國內外專業團隊聯手規劃，並由國際級建築大師李祖原精心設計，超越單一量體的設計觀，以吉祥數字「八」（「發」的諧音），作為設計單元。每八層樓為一個結構單元，彼此接續、層層相疊，構築整體。在外觀上形成有節奏的律動美感，開創國際摩天大樓新風格。TAIPEI 101多節式外觀，以高科技巨型結構（Mega Structure）確保防災防風的顯著效益。每八層形成一組自主構成的空間，自然化解高層建築引起之氣流對地面造成的風場效應，透過建築設計綠化植栽區的區隔，高昇、柔韌有餘，象徵生生不息的傳統建築意涵。內斜七度的建築面，層層往上遞增；無反一個結構單元，彼此接續、層層相疊一個結構單元，彼此接續、層層相疊 TAIPEI 101多節式外觀，以高科技 TAIPEI 101。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/682/300/300" alt="">
+            <div class="text">
+                <h2>日月潭</h2>
+                <p>日月潭，是一個位在臺灣南投縣魚池鄉日月村的半天然淡水湖泊兼水力發電用水庫；該潭是臺灣本島面積第二大的湖泊及第一大半天然湖泊兼發電用水庫。該潭平均水面海拔約736公尺，常態面積約7.93平方公里，最高水深達27公尺。其蘊含自然生態豐富，但其中有非常多是外來種生物。 該潭是台灣平埔族的邵族，所生活的主要地區之一；生活在該潭四周的族人稱其為「水社海」。由於過去當地附近平埔族稱居住於山裡的高山族，為「沙連」，當地又是山區最大的積水盆地，日月潭及其周圍地區因而得名「水沙台灣平埔族的邵族，所生活的主要地區之一；生活在該潭四周的台灣平埔族的邵族，所生活的主要地區之一；生活在該潭四周的台灣平埔族的邵族，所生活的主要地區之一；生活在該潭四周的台灣平埔族的邵族，所生活的主要地區之一；生活在該潭四周的魚池鄉日月村的半天然淡水湖泊兼水力發電用水庫；該潭是臺灣本島面積第二大的湖。
+                </p>
+            </div>
+        </div>
+        <!-- <div class="item">
+            <img src="https://picsum.photos/id/682/300/300" alt="">
+            <div class="text">
+                <h2>士林夜市</h2>
+                <p>士林夜市為臺北市最具規模的夜市之一，以陽明戲院及慈誠宮為中心，包含了文林路、大東路、大南路等熱鬧街市集結而成，其中士林市場早在西元1910年即已興建，以各種傳統小吃聞名國內外，許多觀光客皆慕名而來，像是大餅包小餅、石頭火鍋或是士林大香腸等，更是已經成為美食地標，無人不曉。
+
+                    由於夜市鄰近許多學區，故以學生為主要的消費族群，價格也比一般商店便宜許多，例如家具、衣飾、相片沖印店或寵物用品等，都有其集散的區域，『情人巷』中的精品店與冰店，更是吸引了不少當地學子以外的顧客前往。
+
+                    士林夜市所含範圍極廣，在曲折巷弄內行走，常有柳暗花明又一村的驚喜，週末假日時前往，更是人山人海，擠得水洩不通，常見一家大小提著大包小包剛採買的日用品，嘴裡還塞著美味小吃，滿足之情溢於言表。
+
+                </p>
+            </div>
+        </div> -->
+
+
+    </div>
+
+
+</body>
+
+</html>

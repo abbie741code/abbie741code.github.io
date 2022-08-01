@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+          <!-- 4/7 ⌚ 11:30-11:50 -->
+          <!-- 🌟for/in 迴圈 老師說一定要會 -->
+          <!-- 🌟下午看回放 -->
+    </head>
+    <body>
+        <div class="rect"></div>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const rect = $(".rect");
+
+            const person = {
+                name: "bill",
+                gender: "男",
+                10: 123,
+                age: 25,
+            };
+
+            for (let s in person) {
+                console.log(s, person[s]);
+                rect.append(`<p>${s}: ${person[s]}</p>`);
+            }
+        </script>
+    </body>
+</html>

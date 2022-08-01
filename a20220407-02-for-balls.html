@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .rect {
+                position: relative;
+                width: 800px;
+                height: 600px;
+                border: 1px solid black;
+                background-color: rgb(207, 228, 249);
+            }
+            .ball {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 1px solid black;
+                background-color: rgb(252, 80, 46);
+                color: white;
+                font-weight: 600;
+                text-align: center;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="rect">
+            <!--
+            <div class="ball">88</div>
+            -->
+        </div>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const rect = $(".rect");
+
+            let str = "";
+            for (let i = 0; i < 10; i++) {
+                const left = 50 + i * 60;
+                str += `<div class="ball" style="left: ${left}px; top: 100px;">${
+                    i + 1
+                }</div>`;
+            }
+            rect.append(str);
+        </script>
+    </body>
+</html>

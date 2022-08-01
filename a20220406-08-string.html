@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 4/6 ⌚ 13:31-13:44 -->
+
+</head>
+<body>
+    <div class="abc">1</div>
+    <div class="abc">2</div>
+
+    <script>
+        let name = 'David';
+        const els = document.querySelectorAll('.abc');
+
+        const str = `<h1>Hello ${ name }
+            </h1>`; // 字串樣版
+
+        els[0].innerHTML = str;
+
+        // innerText打 \n可以換行, innerHTML不行
+        const str2 = "John\"s \n dog"; 
+
+        els[1].innerText = str2;
+
+        
+
+
+
+    </script>
+</body>
+</html>

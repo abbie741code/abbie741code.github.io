@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+          <!-- 4/11 ⌚ 10:50-11:20 -->
+    </head>
+    <body>
+        <div id="info"></div>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+
+            const ar = [];
+            for(let i=1; i<=10; i++){
+                ar.push(i);
+            }
+            info.innerHTML = ar.toString()  + '<br>';
+            let ar2 = [...ar]; // 複製陣列
+
+            info.innerHTML += ar2.splice(2, 3) + '<br>';
+            info.innerHTML += ar2.toString() + '<br>';
+
+            ar2 = [...ar];
+            info.innerHTML += ar2.splice(2, 0, 'a', 'b','c') + '<br>';
+            info.innerHTML += ar2.toString() + '<br>';
+
+            ar2 = [...ar];
+            info.innerHTML += ar2.splice(2, 3, 'a', 'b','c') + '<br>';
+            info.innerHTML += ar2.toString() + '<br>';
+
+        </script>
+    </body>
+</html>

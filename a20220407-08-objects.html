@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+          <!-- 4/7 ⌚ 11:50-12:05 -->
+           <!-- 4/8 ⌚ 09:07-09:17 -->
+    </head>
+    <body>
+        <div class="rect"></div>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const rect = $(".rect");
+
+            const person = {
+                name: {
+                    first: "shinder",
+                    last: "lin",
+                },
+                gender: "男",
+                age: 35,
+            };
+            const p2 = { ...person }; // ES6: 展開運算子(spread), 單層複製
+
+            p2.name.first = "victor";
+            p2.age = 28;
+
+            console.log(person);
+            console.log(p2);
+
+            const { gender, age } = p2; // ES6:  展開設定
+            console.log(gender, age);
+            console.log({ gender: gender, age: age }); // 包裝成物件
+            console.log({ gender, age }); // ES6:  包裝成物件
+        </script>
+    </body>
+</html>

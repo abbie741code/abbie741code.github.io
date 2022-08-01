@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <textarea id="ta" cols="30" rows="10"></textarea>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const p1 = {
+                name: "Sam",
+                age: 38,
+            };
+            const p2 = {
+                name: "John",
+                age: 28,
+            };
+            const p3 = {
+                name: "David",
+                age: 25,
+            };
+            p1.next = p2;
+            p2.next = p3;
+            p3.next = p1;
+
+            // 會發生錯誤
+            const str = JSON.stringify(p1);  // error
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+      <!-- 4/11 ⌚ 14:40-15:05  -->
+      <!-- 🌟建議先定義在呼叫 像是const的話就不能先呼叫 -->
+      
+    <body>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            myFunc(7, 9, 12);
+
+            function myFunc(a, b){
+                console.log({a,b});
+                console.log(arguments); // ES5 之前的用法
+            }
+            
+            const myFunc2 = function(a, b){
+                console.log({a,b});
+                console.log(arguments); // ES5 之前的用法
+            };
+            myFunc2(6, 8, 10);
+            
+            // 其餘的運算子都給...b
+            const myFunc3 = function(a, ...b){
+                console.log({a,b});
+            }
+            myFunc3(2,4,6,8);
+
+        </script>
+    </body>
+</html>

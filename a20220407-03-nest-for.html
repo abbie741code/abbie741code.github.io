@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!-- 4/7 ⌚ 09:40-09:48 -->
+        🌟巢狀迴圈 (包兩層)
+
+        ❓ i++是什麼意思??
+
+        <style>
+            .rect {
+                position: relative;
+                width: 800px;
+                height: 600px;
+                border: 1px solid black;
+                background-color: rgb(207, 228, 249);
+            }
+            .ball {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 1px solid black;
+                background-color: rgb(252, 80, 46);
+                color: white;
+                font-weight: 600;
+                text-align: center;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="rect">
+            <!--
+            <div class="ball">88</div>
+            -->
+        </div>
+        <script src="js/jquery-3.6.0.js"></script>
+
+        <!--💠第一個變數習慣用i(index) ,第二個 j,第三個k。但老師習慣地2個用k表示 -->
+        <!--💠在 javascript 裡面使用 ++i 或 i++ 都可以代表原始值加一，不過還是有一點差別。🔗https://tools.wingzero.tw/article/sn/242 -->
+
+        <script>
+            const rect = $(".rect");
+
+            for (let i = 0; i < 10; i++) {
+                for (let k = 0; k < 6; k++) {
+                    const div = $(`<div class="ball">${i + 1}</div>`);
+                    div.css({
+                        left: 50 + i * 60,
+                        top: 100 + k * 70,
+                    });
+                    rect.append(div);
+                }
+            }
+        </script>
+    </body>
+</html>

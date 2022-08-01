@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <!-- 4/6 ⌚ 14:55-15:10 -->
+
+</head>
+<body>
+    <input type="number" id="score" oninput="myChange()" min="0" max="100">
+    <div id="info"></div>
+
+    <script>
+        const score = document.querySelector('#score');
+        const info = document.querySelector('#info');
+
+            // 🌸大到小,要符合邏輯
+        function myChange() {
+            let s = +score.value; // 轉換成數值
+            let g = '';
+            if(s>=0 && s<=100){
+
+                if(s>=90){
+                    g = 'A';
+                } else if(s>=80){
+                    g = 'B';
+                } else if(s>=70){
+                    g = 'C';
+                } else if(s>=60){
+                    g = 'D';
+                } else {
+                    g = 'F';
+                }
+                
+                info.innerHTML = g;
+
+            } else {
+                info.innerHTML = '分數超出範圍'
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>

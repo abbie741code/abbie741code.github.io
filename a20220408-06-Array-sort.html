@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- 4/8 ⌚ 11:20-11:33 -->
+        https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+    </head>
+    <body>
+        <div class="info">1</div>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const str =
+                "畢竟都已經確定無緣季後賽了，湖人做出輪休「三巨頭」決定也無可厚非";
+            const ar1 = str.split("");
+            const ar2 = [2, 4, 6, 19, 8, 32, 63];
+
+            ar1.sort();
+            ar2.sort(); // 預設以字串做排序
+
+            console.log(ar1);
+            console.log(ar2);
+
+            // callback function
+            ar2.sort(function (a, b) {
+                console.log({ a, b });
+                return a - b; // 由小到大
+            });
+            console.log(ar2);
+            
+        </script>
+    </body>
+</html>

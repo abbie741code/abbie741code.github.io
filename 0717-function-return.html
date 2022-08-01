@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7/16 函式</title>
+
+    https://www.youtube.com/watch?v=fe5396rFaQs
+
+    🌟回傳值的運作
+    ------------------------
+    🌟函式的學習重點
+    1️⃣建立函式、呼叫函式的基本流程
+    2️⃣參數的運用
+    3️⃣回傳值的運用
+    ------------------------
+    🌟使用return結束函式,並帶出回傳值
+    ⚠️ return一定要寫在程式裡面
+    ⚠️ return_“回傳值” （中間要空一格） [可省略不寫]
+
+
+    
+</head>
+<body>
+    <div>
+        <img src="/img/return.jpg" width="500px" height="300px" alt="">
+    </div>
+    <script>
+        // return用來結束函式
+        /*
+        function test(){
+            console.log("Hello");
+            return 3 ;
+        }
+        let value = test();
+        console.log(value);
+        */
+
+    </script>
+
+
+<!-- 💟範例 1 -->
+<script>
+    function divide(n1,n2){
+        let result = n1/n2;
+        console.log(result);
+
+        return result;
+    }
+    let ans = divide(4,2);
+    console.log(ans);
+</script>
+
+<!-- 💟範例 1(不同寫法) -->
+<script>
+    function divide(n1,n2){
+        let result = n1/n2;
+        return result;
+    }
+
+    let ans3 = divide(10,2);
+    ans3 = ans3*10;    // 值我要運算第二次*10 -- 先把除法結果送出來,再做*10 
+    console.log(ans3);
+    
+</script>
+
+
+<!-- 💟範例 1 (進階說明)-->
+<script>
+    function divide(r1,r2){
+        let result2 = r1/r2;
+        console.log(result2);
+
+        // return result2;
+    }
+    let ans2 = divide(6,2);
+    // console.log(ans2);
+</script>
+
+    
+</body>
+</html>
+
+
+
+
+
+

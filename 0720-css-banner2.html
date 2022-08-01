@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7/20 互動圖文卡片</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+
+            /* outline: 1px solid sandybrown; */
+        }
+
+        .wrap {
+            width: 100%;
+            display: flex;
+        }
+
+        .item {
+            width: 25%;
+            position: relative;
+        }
+
+        .item img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .item .text {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+            background-color: rgba(224, 217, 217, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            /* 🎖加動畫 */
+            transition: opacity 0.5s;
+        }
+
+        /* 🎖 hover過去的時候才出現 */
+        .item:hover .text {
+            opacity: 1;
+
+        }
+
+
+
+
+
+        .item h2 {
+            font-size: 18px;
+            color:rgb(121, 61, 61);
+        }
+
+        /* 有動畫的一條線 */
+        .item h2:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            /* 上下10px 左右0 */
+            margin: 20px 0;
+            background-color: rgb(163, 113, 113);
+            /* 漸變：跑0.5s ; delay:0.5s*/
+            transition: width .5s .5s;
+        }
+
+        /* 被摸到的時候出現：hover*/
+        .item:hover h2:after {
+           width: 100%;
+        }
+
+        .item p {
+            font-size: 10px;
+            color: rgb(240, 237, 235);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 🌟 假圖製造：fake pic -->
+    <!-- <img src="https://fakeimg.pl/300x200/200"> -->
+
+    <!-- 🌟 假圖製造：picsum -->
+    <!-- <img src="https://picsum.photos/id/684/1200/600" alt=""> -->
+
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/id/684/500/400" alt="">
+            <div class="text">
+                <h2>金魚都能懂002</h2>
+                <p>互動式卡片設計互動式卡片設計互動式卡片設計互動式卡片設計</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/685/500/400" alt="">
+            <div class="text">
+                <h2>金魚都能懂002</h2>
+                <p>互動式卡片設計互動式卡片設計互動式卡片設計互動式卡片設計</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/686/500/400" alt="">
+            <div class="text">
+                <h2>金魚都能懂002</h2>
+                <p>互動式卡片設計互動式卡片設計互動式卡片設計互動式卡片設計</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/687/500/400" alt="">
+            <div class="text">
+                <h2>金魚都能懂002</h2>
+                <p>互動式卡片設計互動式卡片設計互動式卡片設計互動式卡片設計</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

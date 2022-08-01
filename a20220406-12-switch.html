@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="score" oninput="myChange()" min="0" max="100" />
+    <div id="info"></div>
+
+    <script>
+      const score = document.querySelector("#score");
+      const info = document.querySelector("#info");
+
+      function myChange() {
+        let s = +score.value; // 轉換成數值
+        let g = "";
+        if (s >= 0 && s <= 100) {
+            let ss = parseInt(s/10);
+
+            switch(ss){
+                case 10:
+                case 9:
+                    g = "A";
+                    break;
+                case 8:
+                    g = "B";
+                    break;
+                case 7:
+                    g = "C";
+                    break;
+                case 6:
+                    g = "D";
+                    break;
+                default:
+                    g = "F";
+            }
+            info.innerHTML = g;
+        } else {
+            info.innerHTML = "分數超出範圍";
+        }
+        // console.log('ss:', ss);
+      }
+    </script>
+  </body>
+</html>

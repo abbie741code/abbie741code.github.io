@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7/19 css 兩欄畫面切版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+
+            /* outline: 1px solid sandybrown; */
+        }
+
+        .banner {
+            outline: 5px solid rgb(55, 51, 90);
+            width: 100%;
+            height: 100vh;
+            /* background-color: rgb(134, 126, 126); */
+            /* 多重背景設定 */
+            background:
+                linear-gradient(115deg, #7bf 50%, transparent 50%) center center/100% 100%,
+                url("https://picsum.photos/id/684/1200/600") right center / auto 100%;
+
+        }
+
+        .container {
+            /* width: 1200px; */
+            /* rwd */
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            margin: auto;
+
+            outline: 5px solid rgb(50, 213, 29);
+
+        }
+
+        .banner-txt {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            outline: 5px solid rgb(219, 28, 199);
+
+        }
+
+        .banner-txt h1 {
+            font-size: 80px;
+            border-bottom: 5px solid #000;
+            font-weight: 900;
+            padding-bottom: 0.5em;
+
+
+        }
+
+        .banner-txt h1 small {
+            display: block;
+            font-style: 53px;
+            font-weight: 700;
+           
+
+
+
+        }
+
+        .banner-txt h2 {
+            font-size: 50px;
+            font-weight: 700;
+            padding-top: 0.5em;
+          
+
+        }
+
+        .banner-txt p {
+            font-size: 30px;
+            font-weight: 300;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 🌟 假圖製造：fake pic -->
+    <!-- <img src="https://fakeimg.pl/300x200/200"> -->
+
+    <!-- 🌟 假圖製造：picsum -->
+    <!-- <img src="https://picsum.photos/id/684/1200/600" alt=""> -->
+
+
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt">
+                <h1>金魚都能懂
+                    <small> 這個網頁怎麼切</small>
+                </h1>
+                <h2>圖文滿版區塊</h2>
+                <p> 這畫面實在很常見,一定要會切 ！！！</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

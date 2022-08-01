@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+         <!-- 4/8 ⌚ 10:15-10:30 -->
+
+    </head>
+    <body>
+        <div class="info">1</div>
+        <div class="info">2</div>
+        <div class="info">3</div>
+        <div class="info">4</div>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const info = document.querySelectorAll(".info"); // 可迭代的類型, 但不是 Array
+
+            console.log(info);
+            console.log(info.constructor.name); // NodeList
+
+            // 可迭代的 iterable, iterator
+            for (let i of info) {
+                console.log(i);
+            }
+
+            const ar = [...info]; // 轉換成陣列
+            console.log(ar);
+        </script>
+    </body>
+</html>
