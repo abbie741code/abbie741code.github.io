@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 7/6 html DOM操作</title>
+<!-- 
+    https://www.youtube.com/watch?v=5UEoFHYD3RU&t=1244s -->
+ 
+    <style>
+        .text{
+            text-decoration: underline;
+            font-weight: bold;
+          
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+
+<h3> 7/6 HTML DOM 畫面操作 </h3>
+<div id="content"> 星期三 米寶去散步</div>
+<!-- 當使用者點擊按鈕時,我去呼叫函式 -->
+<button onclick="change();"> Click me </button>
+
+
+<script>
+    // 🌟先確定能否抓到body標籤
+    // console.log(document.body);
+
+    // 🌟對body標籤內容做更新  = "new content"
+    //  (把新的內容)塞到（body標籤內所有東西） --> 取代body內所有的東西
+                    //    👈
+    // document.body.innerHTML = "new content";
+    function change(){
+    // 1️⃣ 取得標籤物件 
+    // 2️⃣ 操作標籤物件
+    }
+
+    function change(){
+        // 1️⃣ 取得標籤物件 
+       let divElement = document.querySelector("#content");
+        // 1️⃣ 確認有抓到div
+       console.log(divElement);
+
+        // 2️⃣ 操作標籤物件
+        divElement.innerHTML = "星期四 米寶去公園"
+        divElement.className = "text";
+        divElement.style.color = "red";
+
+     
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

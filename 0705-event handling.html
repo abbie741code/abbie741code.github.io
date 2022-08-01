@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 7/5 Event-handling </title>
+
+    澎澎 Event-handling 事件處理
+    
+    <!-- 1. 在哪個標籤上發生什麼事?
+         2. 事件種類
+         3. 事件對應處的的函式 -->
+
+      <style>
+        .btn{
+            background-color: rgb(210, 154, 202);
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+      </style>
+
+
+
+
+</head>
+
+<body>
+    <!-- <div 事件名稱＝"程式碼"> 標籤內文 </div>
+    <button  事件名稱＝"程式碼">標籤內文</button> -->
+
+
+<!--  🟠 第一個範例：
+    <div onclick="change();"> 點擊 </div>
+    <script>
+        function change(){
+            document.body.innerHTML=" hi ";
+        }
+    </script> -->
+    
+
+
+    <!-- ⭐️ this = 我自己, 整個div物件
+        <div onclick="change(this);"> content </div> -->
+    <!-- ⭐️ 使用this這個關鍵字代表處發事件的標籤 -->
+    <div onclick="change(this);"> content </div>
+    
+    <!-- ⭐️ 再把this透過參數傳遞到函式的裡面 -->
+    <script>
+        function change(elem){
+            elem.innerHTML = "new content";
+
+        }
+    </script>
+
+
+    <!-- 🟠 第2個範例： 按住與放開效果 -->
+    <button
+        onmousedown="down(this);"
+        onmouseup="up(this);"
+    > btnbtn </button>
+
+    <script>
+        function down(elem){
+            elem.style.color = "green";
+           
+        }
+        function up(elem){
+            elem.style.color = "yellow";
+        }
+    </script>
+ 
+
+  <!-- 🟠 第3個範例： -->
+  <!-- 注意大小寫
+    ⚠️ background’C’olor
+    ⚠️ font’W‘eight -->
+  
+<h3>事件處理練習（練習3)</h3>
+<span
+    class="btn" 
+    onmouseover = "over(this);" onmouseout = "out(this);"
+    onmousedown = "down(this);" onmouseup ="up(this);"
+> Click me 1</span>
+
+<span
+    class="btn" 
+    onmouseover = "over(this);" onmouseout = "out(this);"
+    onmousedown = "down(this);" onmouseup ="up(this);"
+> Click me 2</span>
+
+<script>
+    function over(btn3){
+        btn3.style.backgroundColor = "#FFD9EC";
+        console.log('hiii')
+    }
+    function out(btn3){
+        btn3.style.backgroundColor = " rgb(210, 154, 202)";
+    }
+    function up(btn3){
+        btn3.style.fontWeight = "normal"; 
+    }
+    function down(btn3){
+        btn3.style.fontWeight = "bold";
+    }
+
+</script>
+
+
+
+
+
+
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog-adopt</title>
+    <!-- 套用fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <!-- 套用bs -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- 套用 google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700;900&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    
+    <!-- title套用 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+        
+        
+    <style>
+        *{
+            /* outline: 1px red solid; */
+        }
+
+        .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+       
+        }
+
+        .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        }
+
+        *{
+            box-sizing: border-box;
+            
+        }
+        body {
+            margin:auto;
+            padding: 0;
+            max-width: 1600px;
+            min-width: 375px;
+            /* border: 1px rgb(25, 197, 39) solid; */
+        }
+        /* .container{
+            padding:0;
+            width: 100%;
+        } */
+      
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section-width{
+            width: 100%;
+            justify-content: space-between;
+           
+           
+        }
+        /* ------------------------------------- */
+        /* 首頁圖*/
+        .controlbannerpic-width{
+            /* border: 1px red solid; */
+            background-image: url(./images/0330-backgound\ pic\ page01.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        
+        }
+
+         /* 控制圖片大小,不確定後面用不用得到*/
+        .controlbannerpic-width img{
+            /* border: 1px blue solid; */
+            width: 100%;
+            height: auto;
+        }
+
+        .control-banner-text{
+            /* border: rgba(178, 22, 199) solid 1px; */
+            width:90% ;
+            height: 100%;
+            margin: auto;
+            padding: 10% 5% 10% 5% ;
+            font-family: 'Noto Sans TC', sans-serif;
+            
+        }
+        .control-banner-text h2{
+          font-size: 3.5rem;
+          font-size: 900;
+          font-family: 'Noto Sans TC', sans-serif;
+
+        }
+        .control-banner-text h3{
+          font-size: 2.3rem;
+          font-size: 700;
+          font-family: 'Noto Sans TC', sans-serif;
+          line-height:normal;
+        }
+
+         
+
+
+
+
+
+
+        /* -------------------手機板 第二頁(4張卡片區)--------------------------- */
+        .section2-bg{
+            background-image: url(./images/0330\ bg\ section2.png);
+        }
+        
+        
+        .card{
+            background-color: #d2c4b3;
+            height:auto;
+            border-radius: 10%;
+            margin: 10px;
+
+           
+        }
+        .card-top-img{
+            background-image: url(./images/0330\ new\ logo.png);
+            min-height: 200px;
+            width: 100%;
+            border-radius: 10%;
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-repeat: no-repeat;
+
+
+        }
+
+        .card-img-wrap{
+            width:100%;
+            min-height: 200px;
+        
+            border-radius: 10%;
+            overflow: hidden;
+            padding: 8%;
+             /* 狗狗照片置中 */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* 與banner的距離 */
+            margin-top:-50px ;
+
+
+        }
+        .card-img-wrap img{
+            border-radius: 10%;
+           
+        }
+
+        .card-body{
+            padding: 2%;
+        }
+
+
+
+        .btn{
+            font-family: 'Noto Sans TC', sans-serif;
+            border: none;
+            font-size: 22px;
+            color: rgb(61, 60, 60);
+            background-color:#f1efee;
+            /* padding: 20px; */
+            border-radius: 18%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding: 15px 25px 15px;
+            
+            
+
+        }
+
+
+        .btn-hovercolor {
+            color: #fff;
+            background-color: #D4BAAD;
+            
+        }
+
+
+        /* ------------手機版nav--------------------- */
+        
+        .nav-width{
+            width: 100%;
+        }
+
+        .nav-bar{
+            display: flex;
+            height: 50px;
+            width: 100%;
+            background-color: #D4BAAD;
+        }
+
+        .nav-center-logo{
+            display: flex;
+            background: url(./images/clearpng\ 1.svg) center center/300% no-repeat;
+        }
+      
+
+        .nav-left,
+        .nav-center-logo,
+        .nav-right {
+            width: 33.3333%;
+            display: flex;
+            justify-content: space-between;    
+        }
+
+
+        .nav-right{
+            justify-content: flex-end;
+            color: rgb(255, 255, 255);
+        }
+        .nav-right i{
+            font-size: 20px;
+            display: flex;
+            align-items:center;
+            margin-right: 10px;
+        }
+      
+
+
+        /* -------首頁圖在最大螢幕時要 100%*/
+        .bigbannerwidth{
+            background-color: #edebe9;
+            width: 100%;
+        }
+        
+        .banner-pic{
+            width: 100%;
+            height: 900px;
+        }
+
+        .bannerwithdog:hover{
+            background-image: url(./images/image1.png),url(./images/image2.png),url(./images/image3.png),url(./images/0328-bacjground\ color\ psd.png);
+            background-position:30% bottom,center bottom,68% bottom, center center;
+            background-size: 14%,12%,14%, auto;
+            background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
+
+        }
+        .card-title{
+            font-size:large;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+        
+        }    
+        .card-text{
+            font-size:smaller;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+
+        }
+
+         
+      
+        
+        /* -----------手機板第三頁---------------------- */
+        .container-for-carousell{   
+            width: 80%;
+            /* height: 900px; */
+            margin: auto;
+            /* border: rgb(235, 202, 16) solid 1px; */
+
+        } 
+        .section3-card{
+            width: 100%;
+         }
+
+        
+        .img-wrap{ 
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10%;
+        }
+
+        .text-h-wrap{ 
+            width: 100%;
+            font-size:large;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+        }    
+        
+        .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-outline-dark.dropdown-toggle:focus {
+         box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+        }
+
+
+        .text-p-wrap p{ 
+            font-size: 23px;
+            font-family: 'Noto Sans TC', sans-serif;
+
+        }    
+
+        .section3-bg{
+           
+            background-position: right top;
+        }
+           
+            
+        
+        .btn-wrap{
+            font-size: 38px;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+        /* -----避免css重複影響到手機版的css,因此web的css下了第二種版本----*/
+        .container-fluidinweb{
+            padding: 0;
+        }
+        .row2{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .nav-bar2{
+            background-color: #a79696;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            display: flex;
+            top: 0;
+            max-width: 1600px;
+            width: 100%;
+            height: 50px;
+            z-index: 999;
+            
+        }
+        .nav-bar2 a {
+            color: rgb(56, 38, 38);
+        }
+
+        .nav-center-content2 {
+            display: flex;
+            width: 70%;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        .nav-right-content2 {
+            display: flex;
+            width: 20%;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 5px 0px;
+        }
+
+
+
+
+
+
+
+
+        /* ----------手機版時 web的nav不可以出現------------- */
+        @media screen and (max-width:400px) { 
+            /* 🌟要包在這層才對 不然內容會都無法顯現 */
+                .row2{
+                    display:none;
+
+            
+                }
+                .phone-nav{
+                    display:block;
+                } 
+
+                .control-banner-text h2{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    font-family: 'Noto Sans TC', sans-serif
+                    
+                }
+                .control-banner-text h3{
+                    font-size: 1rem;
+                    font-weight: 600;
+                    font-family: 'Noto Sans TC', sans-serif
+
+                }
+                .btn{
+                border: none;
+                font-size: 20px;
+                color: #000;
+                background-color:white;
+                /* padding: 20px; */
+                border-radius: 18%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                padding-left: auto;
+                padding-right: auto;
+                font-family: 'Noto Sans TC', sans-serif
+                }
+
+        }
+
+
+
+        /* -----螢幕大於400px的時候 圖片要變成6+6分（兩張圖並排） ----- */
+        @media screen and (min-width:992px) {
+            .container-fluid{
+                width: 100%;
+                margin: auto;
+            }
+    
+
+            .row{
+                width: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .section-width{
+                padding: 0 ;
+                width: 49%;
+              
+            }
+       
+            .nav-width{
+                width: 100%;
+            }
+             /* ------第三頁--------- */
+            .container-for-carousell{
+                display: flex;
+            }
+           
+            /* ------螢幕大於400px時:手機版的nav要消失,網頁版的nav要跑出來---------- */
+           
+            .phone-nav{
+                display: none;
+            }
+            .web-nav{
+                display:block;
+            }
+            
+        }
+
+
+           
+    </style>
+</head>
+
+
+
+
+<body>
+    <!-------------手機版nav------------->
+    <div class="container-fluid phone-nav">
+        <div class="row">
+            <div class="nav-width">
+                <div class="nav-bar">
+                    <div class="nav-left"></div>
+                    <div class="nav-center-logo"></div>                 
+                    <div class="nav-right">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!--------------網頁版的nav------------->
+
+    <div class="container-fluidinweb web-nav">
+        <div class="row2">
+            <div class="col-12">
+                <div class="nav-bar2 justify-content-between2">
+
+                    <div class="nav-left-logo2">
+                    </div>
+
+                    <div class="nav-center-content2">
+                        <a href="#">關於我們</a>
+                        <a href="#">瀏覽毛孩</a>
+                        <a href="#">公益合作</a>
+                    </div>
+
+                    <div class="nav-right-content2">
+                        <a href="#"><i class="fa-solid fa-user"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!------------------------ 首頁 ---------------------------->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="bigbannerwidth mb-3 ">
+                <div class="controlbannerpic-width ">
+                    <div class="banner-pic bannerwithdog ">
+                        <div class="control-banner-text">
+                            <h2>歡迎光臨-愛毛孩園</h2>
+                            <h3>我們的理念是每隻毛孩都能受到良好的照顧與幫他們找到愛牠們的家。<br>
+                                就算沒有辦法立即領養毛孩回家，也可以遠端透過捐贈飼料照顧毛孩們，同時也可以預約來看毛孩們哦!</h3>
+                        
+                                <div class="banner-btn">
+                                    <button type="button" class="btn btn-secondary">了解更多</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ------------------第二頁(小卡片區)--------------------->
+            <div class="bigbannerwidth mb-3">
+                <div class="row controlbannerpic-width section2-bg text-center">         
+                    <!-- 第一個卡片 (最大時各拿3等分-顯示4塊; 中間尺寸拿66-顯示2塊) -->
+                    <div class="col-lg-3 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-top-img"></div>
+                            <div class="card-img-wrap">
+                                <img src="./images/section2-待領養-小太陽(去背)png.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">小太陽</h6>
+                                <p class="card-text">小太陽6個月，活潑可愛，親人親狗，半夜會自己偷偷爬上床半夜會自己偷偷爬上床替主人暖被哦! </p>
+                                <a href="#" class=" btn btn-hovercolor"> <i class="fa-solid fa-dog"></i>  前往贊助</a>
+                            </div>
+                        </div>
+                    </div>   
+        
+                    <!-- 第2個卡片(最大時各拿3等分-顯示4塊; 中間尺寸拿66-顯示2塊) -->
+                    <div class="col-lg-3 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-top-img"></div>
+                            <div class="card-img-wrap">
+                                <img src="./images/section2-待領養-亨利HENRY(去背).png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">亨利</h6>
+                                <p class="card-text">Henry適應力好，很喜歡草地，每次散步時都第一時間衝去草地上翻滾了。對於基本服從都相當穩定... </p>
+                                <a href="#" class="btn btn-hovercolor"><i class="fa-solid fa-dog"></i>  前往贊助</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- 第3個卡片(最大時各拿3等分-顯示4塊; 中間尺寸拿66-顯示2塊) -->
+                    <div class="col-lg-3 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-top-img"></div>
+                            <div class="card-img-wrap">
+                                <img src="./images/section2-待領養-肥妹(去背).png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">肥妹</h6>
+                                <p class="card-text">肥妹是救援的狗媽媽的小孩，在兩個月大時送出了，但一歲後卻被用各種理由退養了回來。肥妹個性親人... </p>
+                                <a href="#" class="btn btn-hovercolor"><i class="fa-solid fa-dog"></i>  前往贊助</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- 第4個卡片(最大時各拿3等分-顯示4塊; 中間尺寸拿66-顯示2塊) -->
+                    <div class="col-lg-3 col-sm-6 mb-2">
+                        <div class="card">
+                            <div class="card-top-img"></div>
+                            <div class="card-img-wrap">
+                                <img src="./images/section2-待領養-金鑽(去背).png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">金鑽</h6>
+                                <p class="card-text">金鑽，目前1歲，可以說是疫情的受害者。曾經有一個愛她的家庭預定要領養她，也和當時的中途家庭約... </p>
+                                <a href="#" class="btn btn-hovercolor"><i class="fa-solid fa-dog"></i>  前往贊助</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -----------------------------第三頁----------------------------->
+            <div class="bigbannerwidth mb-3 ">
+                <div class="controlbannerpic-width section3-bg">
+                    <div class="container-for-carousell">
+                        <div class="col-12 col-lg-6 ">
+                            <div class="section3-card mb-2 ">
+                                <div class="img-wrap">
+                                    <img src="./images/Section3-left-待領養-花干(去背).png" alt="">
+                                </div>
+        
+                                <div class="text-h-wrap text-center mb-2">
+                                    <i class="fa-solid fa-bone "></i>
+                                    <h1>花干</h1>
+                                </div>   
+
+                                <div class="text-p-wrap">
+                                    <p><i class="fa-solid fa-bone"></i> 性別：女</p>
+                                    <p><i class="fa-solid fa-bone"></i> 年齡：11個月</p>
+                                    <p><i class="fa-solid fa-bone"></i> 體型：愛撒嬌/小型犬</p>
+                                    <p><i class="fa-solid fa-bone"></i> 狀態：預防針已施打、已結紮、已植晶片</p>
+                                    <p><i class="fa-solid fa-bone"></i> 飼主原本想讓花干幫忙看管山上的雞，但因為不一定每天都會上山去，所以不僅沒時間照料狗狗，籠內大多時候更堆積著小山一般高的屎尿，水碗食碗也非常髒。</p><br>
+                                    <p><i class="fa-solid fa-bone"></i> 在嘉義縣家畜疾病防治所的介入後，協助我們與飼主周旋商量，最終終於同意放棄飼養。</p>
+                                    <p><i class="fa-solid fa-paw"></i>  領養請洽：台灣愛毛孩園</p>
+                                </div>
+                                        
+                                <div class="btn-wrap d-flex justify-content-center mt-2 "> 
+                                    <div class="left-btn mr-5">
+                                        <button type="button" class="btn btn-secondary">捐贈飼料</button>
+                                    </div>
+                                    <div class="right-btn">
+                                        <button type="button" class="btn btn-secondary">預約見面</button>
+                                    </div>
+
+                                </div>
+                            </div>    
+                        </div>  
+                        
+                        <div class="col-12 col-lg-6 ">
+                            <div class="section3-card">
+                                <div class="img-wrap">
+                                    <img src="./images/Section3-right-珍妮絲3(去背).png" alt="">
+                                </div>
+        
+                                <div class="text-h-wrap text-center mb-2">
+                                    <i class="fa-solid fa-bone"></i>
+                                    <h1>珍妮絲</h1>
+                                </div>    
+
+                                <div class="text-p-wrap">
+                                    <p><i class="fa-solid fa-bone"></i> 性別：女</p>
+                                    <p><i class="fa-solid fa-bone"></i> 年齡：9週</p>
+                                    <p><i class="fa-solid fa-bone"></i> 體型：中型，他是裡面體型最小的</p>
+                                    <p><i class="fa-solid fa-bone"></i> 狀態：預防針已施打、已結紮、已植晶片</p>
+                                    <p><i class="fa-solid fa-bone"></i> 儘管珍妮絲是所有狗狗裡面最弱小的，但他非常的外向也有點粗魯！</p>
+                                    <p><i class="fa-solid fa-bone"></i> 不論是誰在玩，他一定要搶到中間的位置，他也不會讓自己被比較大隻的狗欺負，或是搶走他的玩具和點心，是非常有個性的狗狗！喜歡撒嬌也喜歡被擁抱。珍妮絲非常活潑可愛，養到她保證每天都很開心唷！</p>
+                                    <p><i class="fa-solid fa-paw"></i>  領養請洽：台灣愛毛孩園</p>
+                                </div>
+                                        
+                                <div class="btn-wrap d-flex justify-content-center mt-2 "> 
+                                    <div class="left-btn mr-5">
+                                        <button type="button" class="btn btn-secondary">捐贈飼料</button>
+                                    </div>
+                                    <div class="right-btn">
+                                        <button type="button" class="btn btn-secondary">預約見面</button>
+                                    </div>
+        
+                                </div>
+                            </div>    
+                        </div>     
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+   
+
+    
+    
+       
+    
+</body>
+
+</html>

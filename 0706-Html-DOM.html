@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 7/6 html DOM操作</title>
+<!-- 
+     🌟操作標籤物件
+    (1️⃣ 取得標籤物件 2️⃣操作標籤物件的HTML跟css)
+    
+     🌟取出＃id放到變數裡面  -->
+
+    
+
+
+
+ 
+    <style>
+
+    </style>
+
+
+
+
+</head>
+
+<!-- ✨ 範例1 : -->
+<body>
+    <div id ="content"> 123</div>
+
+<script>
+    // 1️⃣ 取得標籤物件 
+    let divElement = document.querySelector("#content")
+    // 2️⃣ 操作標籤物件的HTML跟css
+    divElement.innerHTML = "new content";
+    divElement.style.fontSize = "50px";
+    divElement.style.color = "pink";
+</script>
+
+<!-- --------------------------------------------------------- -->
+
+    
+<!-- // ✨ 範例2 : -->
+
+
+<!-- 🌟配合使用者點擊 -->
+<div id="btn"> 小米寶 </div>
+<!-- 1️⃣呼叫函式 -->
+<button onclick="change();"> click me </button>
+                   👇
+<!-- 2️⃣跑裡面的函式change() -->
+<script>
+    function change(){
+        let divElement = document.querySelector("#btn")
+        divElement.innerHTML ="長大的米寶";
+        divElement.style.color="blue";
+    }
+</script>
+
+<!-- --------------------------------------------------------- -->
+<!-- // ✨ 範例3 : -->
+
+
+<h3> 7/6 HTML DOM 畫面操作 </h3>
+<div> 星期三 米寶去散步</div>
+<button> Click me </button>
+
+
+<script>
+    console.log(document.body);
+    // document.body.innerHTML = "new content";
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

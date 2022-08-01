@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rwd</title>
+
+    <style>
+        *{
+            outline: rgb(196, 143, 143) 1px solid;
+        }
+
+        .headline{
+            font-size: 30px;
+            font-weight:bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .desktop-menu{
+            text-align: center;
+            display: block;
+        }
+        .mobile-menu{
+            text-align: center;
+            display: none;
+        }
+
+        
+        .list {
+            display: flex;
+            justify-content: center;
+        }
+
+        .product {
+            flex: none;
+            width: 280px;
+            margin: 10px;
+            background-color: aquamarine;
+        }
+        @media(max-width:1250px){
+            /* 螢幕寬度小於1250px（平板） */
+            
+            .list{
+                flex-wrap: wrap;
+            }
+            .product {
+                width: 45%;
+            }
+        }
+
+        @media(max-width:500px){
+             /* 螢幕寬度小於500px（手機）） */
+        
+            .product {
+                width: 90%;
+            }
+            .headline{
+                font-size: 15px;
+            }
+            .desktop-menu{
+                display: none;
+            }
+            .mobile-menu{
+                display: block;
+            }
+        }
+        
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="headline">tilte</div>
+    <div class="desktop-menu">opt1 opt2 opt3</div>
+    <div class="mobile-menu">
+        <img src="./hamburger-menu.jpeg" width="30" height="30" alt="">
+    </div>
+    <div class="list">
+        <div class="product">product1</div>
+        <div class="product">product2</div>
+        <div class="product">product3</div>
+        <div class="product">product4</div>
+    </div>
+
+</body>
+
+</html>
