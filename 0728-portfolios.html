@@ -19,13 +19,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-     
+    <!-- 套用背景-->
+
     <style>
         * {
             margin: 0;
             padding: 0;
             list-style: none;
-            outline: 1px solid red;
+            /* outline: 1px solid red; */
             font-family: 'Noto Sans TC', sans-serif;
             color: rgb(68, 62, 61);
         }
@@ -33,7 +34,7 @@
         body {
             padding: 100px 0;
 
-            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            background-image: linear-gradient(to top, rgba(244, 232, 236, 0.885) 10%, #d4afbb 100%);
             background-color: rgb(12, 64, 64);
         }
 
@@ -123,13 +124,14 @@
 
         .item .txt {
             width: 55%;
-            /* background-color:#bfc9d7; */
+            background-color:#ffffff8c;
             flex-shrink: 0;
             padding: 40px 30px;
             /* 加了 box-sizing: border-box原本爆版的地方都變正常了 */
             box-sizing: border-box;
             position: relative;
             z-index: 1;
+
 
 
         }
@@ -144,12 +146,12 @@
 
         }
 
-        .item:nth-child(1) .txt {
+        /* .item:nth-child(1) .txt {
             background-color: rgba(35, 174, 184);
-        }
+        } */
 
-        .item:nth-child(2) .txt {
-            background-color: rgba(193, 179, 218);
+        /* .item:nth-child(2) .txt {
+            background-color: #CBD2E9;
         }
 
         .item:nth-child(3) .txt {
@@ -162,7 +164,7 @@
 
         .item:nth-child(5) .txt {
             background-color: #f1eeef;
-        }
+        } */
         
     </style>
 
