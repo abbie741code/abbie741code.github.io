@@ -29,14 +29,17 @@
         padding: 10px;
     }
 
-    /* 平板以上 */
+    /* 平板以上的尺寸  */
     @media screen and (min-width:768px) {
-        /* 平板以上要使用flex橫排 */
+        /* 平板以上的尺寸 要使用flex橫排 */
         .wrap{
             display: flex;
             margin: auto;
         }
-        
+        /* item內文字不一樣寬的時候給他一個％數 每個item寬度就會一致 */
+        .item{
+            width: 33.33%;
+        }
     }
 
  </style>
@@ -49,11 +52,12 @@
     <div class="wrap">
         <div class="item">
             <h3>title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum, sunt impedit, consequatur error nihil velit ipsa quis quidem ipsum aliquid perferendis quos maiores assumenda. Deserunt dolore laudantium cupiditate totam.</p>
+            <p> Lorem ipsum dolor sit amet con </p>
         </div>
         <div class="item">
             <h3>title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum, sunt impedit, consequatur error nihil velit ipsa quis quidem ipsum aliquid perferendis quos maiores assumenda. Deserunt dolore laudantium cupiditate totam.</p></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum, sunt impedit, consequatur error nihil velit ipsa quis quidem ipsum aliquid perferendis quos maiores assumenda. Deserunt dolore laudantium cupiditate totam.</p>
+        </div>
         <div class="item">
             <h3>title</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum, sunt impedit, consequatur error nihil velit ipsa quis quidem ipsum aliquid perferendis quos maiores assumenda. Deserunt dolore laudantium cupiditate totam.</p>
