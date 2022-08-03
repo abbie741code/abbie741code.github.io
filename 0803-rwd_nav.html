@@ -21,6 +21,7 @@
     .header{
         height:50px;
         background-color: #ccc;
+        position: relative;
     }
     .logo{
         width: 60px;
@@ -36,6 +37,14 @@
         width: 40px;
         height: 40px;
         background-color: #000;
+        display: block;
+        position: absolute;
+        top:5px;
+        right: 10px;
+
+    }
+    .menu_btn span{
+        opacity: 0;
 
     }
 
@@ -56,9 +65,9 @@
 
         <!-- 把選單也設定同樣id就可以控制checkbox -->
         <label for="menu_control" class="menu_btn">
-            <label for="menu_control" class="menu_btn">
             <span>選單</span>
         </label>
+
         <nav>
             <a href="" #="">link</a>
             <a href="" #="">link</a>
