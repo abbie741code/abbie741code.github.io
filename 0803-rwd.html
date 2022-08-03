@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8/3 RWD</title>
+    
+    <!-- 先從手機版開始 -->
+   
+    
+   
+ <style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        outline: 1px solid #f00;
+    }
+    .wrap{
+        width: 100%;
+        max-width: 1400px;
+
+    }
+    .item{
+        background-color: #ccc;
+        margin:0 10px 20px;
+        padding: 10px;
+    }
+
+    /* 平板以上 */
+    @media screen and (min-width:768px) {
+        /* 平板以上要使用flex橫排 */
+        .wrap{
+            display: flex;
+            margin: auto;
+        }
+        
+    }
+
+ </style>
+
+
+</head>
+
+
+<body>
+    <div class="wrap">
+        <div class="item">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum, sunt impedit, consequatur error nihil velit ipsa quis quidem ipsum aliquid perferendis quos maiores assumenda. Deserunt dolore laudantium cupiditate totam.</p>
+        </div>
+        <div class="item">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum, sunt impedit, consequatur error nihil velit ipsa quis quidem ipsum aliquid perferendis quos maiores assumenda. Deserunt dolore laudantium cupiditate totam.</p></div>
+        <div class="item">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad rerum, sunt impedit, consequatur error nihil velit ipsa quis quidem ipsum aliquid perferendis quos maiores assumenda. Deserunt dolore laudantium cupiditate totam.</p>
+        </div>
+    </div>
+   
+
+</body>
+
+</html>
