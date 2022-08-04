@@ -16,10 +16,14 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            outline: 1px solid #f00;
+            /* outline: 1px solid #f00; */
         }
-        .wrap{
-            outline:5px solid rgb(77, 71, 235);
+        /* 預設是baseline要改成vertical-align: bottom;就不會有討厭的線 */
+        img{
+            vertical-align: bottom;
+        }
+        .item-group{
+           /* outline:5px solid rgb(77, 71, 235); */
            width: 100%;
            max-width: 1400px;
            margin: auto;
@@ -37,7 +41,7 @@
 
         .title{
             margin: 0 10px 20px ;
-            background-color: #ccc;
+            background-color: rgb(230, 225, 225);
             padding: 30px 10px;
         }
         .title h2{
@@ -51,7 +55,7 @@
         }
 
         .item{
-            margin: 0 10px 40px;
+            margin: 0 10px 0px;
         }
 
         .item h3{
@@ -67,13 +71,31 @@
         .item .pic img{
             width: 100%;
         }
+        .service{
+            background-color: rgb(170, 186, 200);
+            margin: 60px 0px;
+        }
         
 
         @media screen and (min-width:768px) {
             .item-group{
                 display: flex;
             }
-            
+            .service .item{
+                display: flex;
+            }
+            .service .item .pic,
+            .service .item .text{
+                width: 100%;
+            }
+            .service .item .text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 20px;
+                /* padding這樣有增加40px[所以要用border-box這樣與pic一人一半空間] */
+                box-sizing: border-box;
+            }
         }
 
         
