@@ -22,10 +22,14 @@
             padding: 0;
             list-style: none;
             font-family: 'Noto Sans TC', sans-serif;
-            outline: 1px solid #f00;
+            /* outline: 1px solid #f00; */
+        }
+        body{
+            background: rgb(250, 241, 241);
         }
         #ab-bg-light{
-            background-color: rgb(157, 155, 155)!important; 
+            background-color:#bb8ea4!important; 
+            color: rgb(195, 185, 185) !important;
         }
         /* 預設是baseline要改成vertical-align: bottom;就不會有討厭的線 */
         img{
@@ -36,9 +40,10 @@
            width: 100%;
            max-width: 1400px;
            margin: auto;
+         
         }
         .footer{
-            background-color: rgb(119, 116, 116);
+            background-color: #565356;
             color: #fff;
             text-align: center;
             /* 上下10左右0 */
@@ -50,7 +55,7 @@
 
         .title{
             margin: 0 10px 20px ;
-            background-color: rgb(230, 225, 225);
+            background-color:  #f2e9eb;
             padding: 30px 10px;
         }
         .title h2{
@@ -64,26 +69,37 @@
         }
 
         .item{
-            margin: 0 10px 0px;
+            margin: 10px;
+            border: #747274 1px solid;
         }
 
         .item h3{
             font-size: 24px;
             text-align: center;
-            margin: 10px;
-            
-            
+            margin: 10px;  
+        }
+        .item h3:hover{
+           background: #fedd89; 
         }
         .item .text p{
             font-size: 18px;
             text-align: center;
             padding: 10px;
         }
+        .item .pic{
+          opacity: 1;
+        }
+
+        .item .pic:hover{
+          opacity: .8;
+        }
+
+
         .item .pic img{
             width: 100%;
         }
         .service{
-            background-color: rgb(170, 186, 200);
+            background-color: #d8b8bf;
             margin: 60px 0px;
         }
         
@@ -133,19 +149,19 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">快閃消息</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">如何購買</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
+                  優惠活動
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">VIP優惠</a></li>
+                  <li><a class="dropdown-item" href="#">團購優惠</a></li>
+                  <li><a class="dropdown-item" href="#">生日優惠</a></li>
                 </ul>
               </li>
             </ul>
@@ -240,12 +256,12 @@
     <div class="service">
         <div class="wrap">
             <div class="item-group">
-                <div class="item">
+                <div class="item border-0">
                     <div class="pic">
                         <img src="/img/cake/chef.jpeg" alt="">
                     </div>
-                    <div class="text">
-                        <h3>Chef Philippe Labbé</h3>
+                    <div class="text text-center">
+                        <h2>Chef Philippe Labbé</h2>
                         <p>Chef Philippe Labbé 來自法國香檳地區，擁有20餘年與頂級廚師共事的工作經歷。隨後他開始管理法國的眾多著名餐廳，其中包括豪華酒店香格里拉和標誌性的米其林星級餐廳 Tour d 'Argent
                             Chef Philippe Labbé在各種烹飪比賽中獲得了諸多獎項，並
                             在2013年被業界授予《高特米魯Gault Millau》指南頒發的年度大廚的稱號。</p>
@@ -259,10 +275,7 @@
         <div class="wrap">
             <div class="title">
                 <h2>台灣分店位置</h2>
-                <p>・僅開放當月甜點預訂，次月甜點將在當月20號於粉絲專頁公佈並開放預訂。
-                    ・預訂甜點皆需預付款項，可線上刷卡/轉帳/超商代碼付款，不提供現場取貨付款。
-                    ・僅開放當月甜點預訂，次月甜點將在當月20號於粉絲專頁公佈並開放預訂。
-                    ・預訂甜點皆需預付款項，可線上刷卡/轉帳/超商代碼付款，不提供現場取貨付款。</p>
+                <p>・近2個月的時間，我們反覆調整甜點口感與基調，多次的杯測與挑選，留下能相互襯托的咖啡：柑橘、巧克力、香料，從咖啡的風味輪，走到甜點的食材，以味蕾碰撞時的閃光，照亮屬於深法的中秋。</p>
             </div>
             <div class="item-group">
                 <div class="item">
