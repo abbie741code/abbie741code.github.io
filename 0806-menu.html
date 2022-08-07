@@ -40,6 +40,7 @@
         }
         body{
             background: rgb(250, 241, 241);
+            min-width: 1440px;
         }
         #ab-bg-light{
             background-color:#bb8ea4!important; 
@@ -49,13 +50,7 @@
         img{
             vertical-align: bottom;
         }
-        .item-group{
-           /* outline:5px solid rgb(77, 71, 235); */
-           width: 100%;
-           max-width: 1400px;
-           margin: auto;
-         
-        }
+    
         .footer{
             background-color: #565356;
             color: #fff;
@@ -68,84 +63,85 @@
             background-size: cover;
             object-fit: cover;
         }
+        /* -----------card css--------------------- */
+
+        .wrap{
+            outline: 3px rgb(29, 85, 42) solid;
+            background: rgb(203, 192, 192);
+            /* height: 100vh; */
+            display: flex;
+            align-items: center;
+            
+        }
+        .container{
+            outline: 1px rgb(28, 23, 153) solid;
+            width: 1440px;
         
-
-        .title{
-            /* margin: 0 10px 20px ; */
-            background-color:  #cfc6c8;
-            padding: 30px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .title h2{
-            text-align: center;
-            font-size: 2.8rem;
-        }
-        .title  p{
-            font-size: 1rem;
-            text-align: center;
-           
-        }
-
         .item{
-            margin: 10px;
-            border: #747274 1px solid;
-        }
+            /* 370+(15*2)=1200px */
 
-        .item h5{
-            font-size: 2rem;
-            text-align: center;
-            /* margin: 10px;   */
-        }
-        .item h5:hover{
-           background: #fedd89; 
-        }
-        .item .text p{
-            font-size: 1rem;
-            text-align: center;
-            padding: 10px;
+            width: 368px;
+            /* 上下0左右15px */
+           margin:  15px;
+           display: flex;
+           background-color: #fff;
+           border: 1px solid #ccc;
+            /* x y 模糊程度 */
+           box-shadow: 0 10px 30px rgba(102, 48, 48, 0.5);
         }
         .item .pic{
-          opacity: 1;
-          height: 200px;
-          overflow: hidden;
-          background-size: cover;
-          background-position: center;
+            width: 50%;
         }
-
-        .item .pic:hover{
-          opacity: .8;
-        }
-
-
         .item .pic img{
             width: 100%;
+            height: 100%;
+            /* 讓照片不會變形(讓照片跟容器一樣大) */
             object-fit: cover;
         }
-        .service{
-            background-color: #d8b8bf;
-            margin: 60px 0px;
+        .item .txt{
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            
+            justify-content:center;
+            align-items: center;
+            
         }
-        
+        .item .txt h2 {
+            margin-bottom: .4em;
+            font-weight: 500;
+        }
+        .item .txt p {
+            font-weight: 300;
+        }
+        .item .txt .btn{
+            line-height: 1.5em;
+            border: 1px solid #ccc;
+            padding: 0 1em;
+            align-self: flex-end;
+            text-decoration: none;
+            border-radius: 200px;
+            margin: 1em;
+            color: #aaa;
+        }
+
+        .item .txt .btn:hover{
+            background-color: #aaa;
+            color :aliceblue;
+        }
+
+       
+        /* -------rwd ------- */
 
         @media screen and (min-width:768px) {
             
-            .item-group{
-                display: flex;
-            }
-            .service .item{
-                display: flex;
-            }
-            .service .item .pic,
-            .service .item .text{
-                width: 100%;
-            }
-            .service .item .text{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 0 20px;
-                /* padding這樣有增加40px[所以要用border-box這樣與pic一人一半空間] */
-                box-sizing: border-box;
-            }
+           
         }
 
         
@@ -169,16 +165,16 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a  class="nav-link active" aria-current="page" href="https://abbie741code.github.io/0805-dessert-shop">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">快閃消息</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">本月菜單</a>
+                <a  class="nav-link" href="#">本月菜單</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   優惠活動
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -192,82 +188,85 @@
         </div>
       </nav>
     <div class="banner">
-        <img src="https://picsum.photos/id/184/1400/500" alt="">
+        <img src="/img/cake/menu-banner.jpeg"alt="">
     </div>
 
     <!-- about section -->
     <div class="about">
         <div class="wrap">
-            <div class="title">
-                <h2>關於我們</h2>
-                <p>創業自2011年，擁有網路80萬人氣的深夜裡的法國手工甜點，有著主廚RICK一手打造、多變豐富的塔類甜點世界。每天堅持新鮮現做，不使用任何香精及色素，以頂級食材堆疊出真實美味！</p>
-            </div>
-            <div class="item-group">
+            <div class="container">
                 <div class="item">
                     <div class="pic">
-                        <a href="https://abbie741code.github.io/0805-dessert-shop"><img src="/img/cake/cake1 拷貝.jpg"
-                            alt=""></a>
-               
+                        <img src="https://picsum.photos/id/684/400/400" alt="">
                     </div>
-                    <div class="text">
-                        <h5 >巧克力奶昔戚風蛋糕</h5>
-                        <p>各大媒體爭相報導，眾藝人爭相品嚐，好評不斷！
-                            層次分明的口感，忍不住讓人一口接一口，
-                            層層的繁複手工，造就了另類絕妙的口感。
-                            各大媒體 x 藝人 x 網友 -> 瘋狂推薦！</p>
+                    <div class="txt">
+                        <h2>米寶真可愛米寶真可愛</h2>
+                        <p>Loconsequuntur a at iste, animi id delectus optio, quam cumque nobis maiores laboriosam nemo repellat? Doloremque, laborum?</p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/609/400/400" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>米寶真可愛米寶真可愛</h2>
+                        <p>Loconsequuntur p at iste, animi id delectus optio, quam cumque nobis maiores laboriosam nemo repellat? Doloremque, laborum?</p>
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/604/400/400" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>米寶真可愛米寶真可愛</h2>
+                        <p>Locquun, animi id delectus optio, quam cumque nobis maiores laboriosam nemo repellat? Doloremque, laborum?</p>
+    
+                        <a href="#" class="btn">more</a>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/504/400/400" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>米寶真可愛米寶真可愛</h2>
+                        <p>Locquun, animi id delectus optio, quam cumque nobis maiores laboriosam nemo repellat? Doloremque, laborum?</p>
+    
+                        <a href="#" class="btn">more</a>
                     </div>
                 </div>
 
                 <div class="item">
                     <div class="pic">
-                        <img src="/img/cake/cake2 拷貝.jpg" alt="">
+                        <img src="https://picsum.photos/id/504/400/400" alt="">
                     </div>
-                    <div class="text">
-                        <h5>萬年不敗草莓蛋糕</h5>
-                        <p>唯美的粉紅色
-
-                            上層彷彿被大雪花覆蓋
-                            
-                            新鮮草莓貼花高貴視覺！
-                            
-                            視覺與味蕾的雙重享受 ,獻給最愛的人</p>
+                    <div class="txt">
+                        <h2>米寶真可愛米寶真可愛</h2>
+                        <p>Locquun, animi id delectus optio, quam cumque nobis maiores laboriosam nemo repellat? Doloremque, laborum?</p>
+    
+                        <a href="#" class="btn">more</a>
                     </div>
                 </div>
-
 
                 <div class="item">
                     <div class="pic">
-                        <img src="/img/cake/cake3 拷貝.jpg" alt="">
+                        <img src="https://picsum.photos/id/504/400/400" alt="">
                     </div>
-                    <div class="text">
-                        <h5>酸甜好滋味藍莓塔</h5>
-                        <p>猶如藍寶石般的深色果實，輕薄的外皮下，汁液飽綻，
-                            每一枚咬開時，輕發出【啵】的清脆聲響，
-                            清新微酸配上乳酪，沒有多餘甜，做法比說法重</p>
+                    <div class="txt">
+                        <h2>米寶真可愛米寶真可愛</h2>
+                        <p>Locquun, animi id delectus optio, quam cumque nobis maiores laboriosam nemo repellat? Doloremque, laborum?</p>
+    
+                        <a href="#" class="btn">more</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-    <!-- second section -->
-    <div class="service">
-        <div class="wrap">
-            <div class="item-group">
-                <div class="item border-0">
-                    <div class="pic">
-                        <img src="/img/cake/chef.jpeg" alt="">
-                    </div>
-                    <div class="text text-center">
-                        <h2>Chef Philippe Labbé</h2>
-                        <p>Chef Philippe Labbé 來自法國香檳地區，擁有20餘年與頂級廚師共事的工作經歷。隨後他開始管理法國的眾多著名餐廳，其中包括豪華酒店香格里拉和標誌性的米其林星級餐廳 Tour d 'Argent
-                            Chef Philippe Labbé在各種烹飪比賽中獲得了諸多獎項，並
-                            在2013年被業界授予《高特米魯Gault Millau》指南頒發的年度大廚的稱號。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    
     
     <!-- footer section -->
     <div class="footer">
