@@ -96,6 +96,7 @@
         .item{
             margin: 10px;
             border: #747274 1px solid;
+            /* width: 30%; */
         }
 
         .item h5{
@@ -146,6 +147,14 @@
             .item-group{
                 display: flex;
             }
+            .item{
+                width: 30%;
+            }
+            /* 為了讓廚師的section不悖item:30%影響到 因此下了item-100去壓過他 */
+            .item-100{
+                width: 100%;
+            }
+          
             .service .item{
                 display: flex;
             }
@@ -251,7 +260,7 @@
                         <img src="/img/cake/cake 300 200.jpg" alt="">
                     </div>
                     <div class="text">
-                        <h5 >巧克力奶昔戚風蛋糕</h5>
+                        <h5 >雲朵彩虹戚風蛋糕</h5>
                         <p>各大媒體爭相報導，眾藝人爭相品嚐，好評不斷！
                             層次分明的口感，忍不住讓人一口接一口，
                             層層的繁複手工，造就了另類絕妙的口感。
@@ -287,11 +296,12 @@
             </div>
         </div>
     </div>
-    <!-- second section -->
+    <!-- chef section -->
     <div class="service">
         <div class="wrap">
             <div class="item-group">
-                <div class="item border-0">
+                <!-- 為了讓廚師的section不悖item:30%影響到 因此下了item-100去壓過他 -->
+                <div class="item item-100 border-0">
                     <div class="pic">
                         <img src="/img/cake/chef.jpeg" alt="">
                     </div>
