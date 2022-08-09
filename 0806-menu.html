@@ -35,16 +35,17 @@
             padding: 0;
             list-style: none;
             font-family: 'Noto Sans TC', sans-serif;
-            /* outline: 1px solid #f00; */
+            outline: 1px solid #f00;
             font-size: 62.5%;
         }
         body{
             background: rgb(250, 241, 241);
-            min-width: 1440px;
+            
+            /* min-width: 1440px; */
         }
         #ab-bg-light{
             background-color:#bb8ea4!important; 
-            color: rgb(195, 185, 185) !important;
+            /* color: rgb(195, 185, 185) !important; */
         }
         /* 預設是baseline要改成vertical-align: bottom;就不會有討厭的線 */
         img{
@@ -60,8 +61,8 @@
         }
         .banner img{
             width: 100%;
-            background-size: cover;
-            object-fit: cover;
+            /* background-size: cover;
+            object-fit: cover; */
         }
         /* -----------card css--------------------- */
 
@@ -75,7 +76,8 @@
         }
         .container{
             outline: 1px rgb(28, 23, 153) solid;
-            width: 1440px;
+        /* 把width: 1440px拿掉後 卡片會微微變形 */
+            /* width: 1440px; */
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -87,7 +89,7 @@
             /* 上下0左右15px */
            margin:  15px;
            display: flex;
-           background-color: #fff;
+           background-color: rgb(239, 238, 238);
            border: 1px solid #ccc;
             /* x y 模糊程度 */
            box-shadow: 0 10px 30px rgba(102, 48, 48, 0.5);
