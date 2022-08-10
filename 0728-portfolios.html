@@ -32,7 +32,7 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            /* outline: 1px solid red; */
+            outline: 1px solid red;
             font-family: 'Noto Sans TC', sans-serif;
             color: rgb(68, 62, 61);
         }
@@ -80,20 +80,23 @@
         }
         .container{
             /* outline: 4px solid rgb(100, 212, 152); */
-            width: 1200px;
+            /* width: 1200px; */
             margin:0  auto;
-            /* display: flex;
-            flex-wrap: wrap; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
 
 
         .item {
             display: flex;
-            /* justify-content: center; */
             align-items: center;
             margin-bottom: 70px;
             /* background-color: rgb(171, 175, 175); */
+         
+            /* flex-wrap: wrap;
+            justify-content: center; */
 
         }
 
@@ -198,6 +201,23 @@
             
         }  */
         
+        @media screen and (max-width:375px) {
+
+            .item {
+            display: flex;
+            align-items: center;
+            /* margin-bottom: 70px; */
+            /* background-color: rgb(171, 175, 175); */
+         
+            flex-wrap: wrap;
+            justify-content: center;
+            }
+
+           
+
+        }
+            
+        
     </style>
 
 </head>
@@ -240,19 +260,19 @@
 
             </div>
 
-            <!-- <div class="item">
+            <div class="item">
                 <div class="pic">
                     <a href="https://abbie741code.github.io/0805-dessert-shop"><img src="/img/cake/cake1.jpg"
                             alt=""></a>
                 </div>
                 <div class="txt">
 
-                    <h2> <i class="fa-solid fa-arrow-left-long"></i> 法式甜點店</h2>
+                    <h2> <i class="fa-solid fa-arrow-left-long"></i> Abbie法式甜點店</h2>
                     <p>網站包含RWD</p>
                     <p>See more...</p>
                     <center> <button onclick="window.location.href='https://abbie741code.github.io/0805-dessert-shop' "  type="button" class="btn btn-secondary">作品集連結</button> </center>
                 </div>
-            </div> -->
+            </div>
 
 
             <div class="item">
