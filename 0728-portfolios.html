@@ -32,7 +32,7 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            /* outline: 1px solid red; */
+            outline: 1px solid red;
             font-family: 'Noto Sans TC', sans-serif;
             color: rgb(68, 62, 61);
         }
@@ -117,7 +117,6 @@
             /* ⭐️ 圖片置中 */
             background-position: center center;
             background-size: cover;
-
             overflow: hidden;
 
         }
@@ -129,6 +128,9 @@
             vertical-align: middle;
             transform: scale(1, 1);
             transition: all 1s ease-out;
+            background-size: cover;
+            /* 下在img上讓圖片不變形 */
+            object-fit: cover;
         }
 
         .item .pic:hover img {
@@ -211,6 +213,7 @@
          
             flex-wrap: wrap;
             justify-content: center;
+            min-width: 375px;
             }
 
            
