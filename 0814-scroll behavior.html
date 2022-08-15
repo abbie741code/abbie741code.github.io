@@ -9,6 +9,10 @@
 
     <!-- https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-behavior -->
     <style>
+        /* 使用inline-block可以變成行內元素卻有自己的空間 */
+        *{
+            outline: 1px red solid;
+        }
         a {
             display: inline-block;
             width: 50px;
@@ -17,6 +21,7 @@
 
         nav,
         scroll-container {
+            /* outline: 3px green solid; */
             display: block;
             margin: 0 auto;
             text-align: center;
@@ -38,6 +43,7 @@
 
         scroll-page {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100%;
