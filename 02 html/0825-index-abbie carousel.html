@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 套用font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- 引用bootstrap -->
+    <link
+      rel="stylesheet"
+      href="/bootstrap-4.2.1-dist/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <!-- owl.carousel -->
+    <link rel="stylesheet" href="/css/owl.carousel.css"></link>
+      <link rel="stylesheet" href="/assets/owlcarousel/assets/owl.theme.default.min.css"></link>
+      <script src="/assets/vendors/jquery.min.js"></script>
+      <script src="/assets/owlcarousel/owl.carousel.min.js"></script>
+ 
+    <!-- 引用slick -->
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick-theme.css" />
+    <!-- 這行jq重複了要註解掉 -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> -->
+    <script src="/slick-1.8.1/slick/slick.js"></script>
+
+    <title>8/25 Index首頁</title>
+    <style>
+      * {
+        /* outline: 1px solid rgb(221, 144, 144); */
+        text-decoration: none !important;
+        margin: 0;
+        padding: 0;
+      }
+      .slider {
+        /* max-width: 1200px; */
+        margin: 30px 50px 50px;
+        width: 100%;
+      }
+
+      .slick-slide {
+        margin: 7px;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: #333333;
+      }
+
+      .slick-dots {
+        bottom: -30px;
+        display: none !important;
+      }
+      a.dot {
+        padding: 10px 10px;
+      }
+      a.dot:hover {
+        /* background: #ddd; */
+        color: rgb(138, 136, 136) !important;
+      }
+
+      .slider-img-wrap {
+        width: 100%;
+      }
+
+      .slider-item{
+        padding: 10%;
+      }
+
+
+      @media screen and (min-width: 768px) {
+  .slider-item{
+        padding: 2%;
+      }
+
+}
+      .slider-img-wrap img {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+<!-- 
+  <body class="otherPage body">
+    <div class="menuBack"></div>
+    <div class="proclamation nonBg close">
+      <div class="proclamation-wrap">
+        <div class="proclamation-content">
+          <div class="proclamation-close"></div>
+          <p>您的密碼為您的手機號碼</p>
+        </div>
+      </div>
+    </div> -->
+
+
+
+    <div class="max-width-container">
+      <header>
+        <div class="header-inner">
+          <div class="header-inner-left">
+            <div class="logo-img">
+              <a href="index.html"><img src="images/logo-03.png" /></a>
+              <a href="index.html"><img src="images/logo-02.png" /></a>
+            </div>
+            <div class="search-wrap">
+              <input type="text" placeholder="Search.." />
+              <span class="icon"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></span>
+            </div>
+          
+            
+          </div>
+  
+          <ul class="header__nav">
+            <li class="nav__item"><a href="2020UGM.html" title="1">課程行事曆</a></li>
+            <li class="nav__item"><a href="#" title="2">最新活動</a></li>
+            <li class="nav__item"><a href="#" title="3">觀看影片</a></li>
+            <li class="nav__item"><a href="#" title="4">資源下載</a></li>
+            <li class="nav__item"><a href="#" title="5">最新消息</a></li>
+            <!-- 下拉式選單中的search bar  -->
+            <li class="nav__item">
+               <div class="search-wrap">
+              <div>
+                <input type="text" placeholder="Search.." />
+              </div>
+              <div class="icon"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></div>
+            </div>
+              <!-- 下拉式選單中的註冊與登入按鈕  -->
+            <!-- <li class="nav__item">
+              <div class="header-btn p-1 header-btn-phone">
+               <a class="mr-5"href="#"><input class="register-btn"  type="submit" name="" value="註冊"></a> 
+               <a href="#"><input class="login-btn" type="submit" name="" value="登入"></a>   
+              </div> -->
+
+            </li>
+          </li>
+          </ul>
+  
+          <div class="header-inner-right">
+            <div class="header-btn">
+              <a href="#"><input class="register-btn"  type="submit" name="" value="註冊">
+              </a> 
+              <a href="#"><input class="login-btn" type="submit" name="" value="登入">
+              </a> 
+            </div>
+  
+            <div class="link-left ml-4">
+              <div class="yellow-line "></div>
+              <div class="ml-2">小狗勾</div>
+              <a href="#">
+                <input class="login-out ml-2" type="submit" name="" value="登出">
+              </a>
+            </div>
+          </div>
+  
+          <a class="hamBar" href="#"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="deco-arrow adjust-bottom"></div>
+      </header>
+      <!-- banner輪播牆 -->
+      <div class="banner-wrap">
+        <!-- desktop -->
+        <div class="owl-carousel owl-theme banner-sizeL">
+          <div class="item item1">
+            <a href="#">
+              <img src="/images/Banner-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="item item2">
+            <a href="#">
+              <img src="/images/Banner-1.jpg" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- phone -->
+        <div class="owl-carousel owl-theme banner-sizeS">
+          <div class="item item1">
+            <a href="#">
+              <img src="/images/index-banner-phone.jpg" alt="">
+            </a>
+          </div>
+          <div class="item item2">
+            <a href="#">
+              <img src="/images/index-banner-phone.jpg" alt="">
+            </a>
+          </div>
+        
+        </div>
+      
+      </div>
+
+      <!--主區塊：main-1-->
+      <div class="index-content-container">
+        <!-- 桌機板佔了60% -->
+        <div class="index-content-wrap">
+          <!--  what's new膠囊區-桌機版 -->
+          <a href="#" class="whats-new-btn-wrap">
+            <div class="whats-new-btn-left">
+              <div class="index-icon mr-3">
+                <img src="/images/speaker.png" alt="" />
+              </div>
+              <p>What's New</p>
+            </div>
+            <div class="whats-new-btn-right">
+              <p>
+                汽車電氣化趨勢從根本上打破了國外大廠壟斷汽車動力總成系統的
+                局面，也為台灣廠商帶來切入市場的絕佳契機。
+                汽車電氣化趨勢從根本上打破了國外大廠壟斷汽車動力總成系統的
+                局面，也為台灣廠商帶來切入市場的絕佳契機。
+              </p>
+              <div class="index-icon" onclick="location.href='login.html'">
+                <img src="/images/click.png" alt="" />
+              </div>
+            </div>
+          </a>
+          <!--  what's new膠囊區-手機版 -->
+          <a href="#" class="whats-new-btn-wrap-phone">
+            <div class="whatsnewbtn-phone-top">
+              <div class="index-icon mr-5">
+                <img src="/images/speaker.png" alt="" />
+              </div>
+              <p>What's New</p>
+            </div>
+            <div class="whatsnewbtn-phone-bottom">
+              <p>
+                汽車電氣化趨勢從根本上打破了國外大廠壟斷汽車動力總成系統的
+                局面，也為台灣廠商帶來切入市場的絕佳契機。
+                汽車電氣化趨勢從根本上打破了國外大廠壟斷汽車動力總成系統的
+                局面，也為台灣廠商帶來切入市場的絕佳契機。
+              </p>
+              <div class="index-icon" onclick="location.href='login.html'">
+                <img src="/images/click.png" alt="" />
+              </div>
+            </div>
+          </a>
+          <!-- 最新活動section -->
+          <div class="section-1">
+            <div class="title mt-5 mb-4">
+              <span>最新活動</span>
+            </div>
+            <div class="text-18-dark m-4">
+              實體活動、線上研討會，及和 Channel Partners co-marketing的活動等
+            </div>
+
+            <!-- slick輪播牆  -->
+            <div class="slider">
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="yellow-btn"
+              onclick="location.href='login.html'"
+            >
+              更多活動
+            </button>
+          </div>
+          <!-- 觀看影片section -->
+          <div class="section-1">
+            <div class="title mt-5 mb-4">
+              <span>觀看影片</span>
+            </div>
+            <div class="text-18-dark m-4">
+              課程影片、活動影片，及YouTube 或 Product Video等
+            </div>
+
+            <!-- slider輪播牆  -->
+            <div class="slider">
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="yellow-btn"
+              onclick="location.href='login.html'"
+            >
+              更多影片
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--主區塊：main-2（有灰色背景照片）-->
+      <div class="index-content-container2">
+        <!-- 桌機板佔了60% -->
+        <div class="index-content-wrap">
+          <!-- 資源下載section -->
+          <div class="section-1">
+            <div class="title mt-5 mb-4">
+              <span>最新活動</span>
+            </div>
+            <div class="text-18-dark m-4">
+              實體活動、線上研討會，及和 Channel Partners co-marketing的活動等
+            </div>
+
+            <!-- slider輪播牆  -->
+            <div class="slider">
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="yellow-btn"
+              onclick="location.href='login.html'"
+            >
+              更多活動
+            </button>
+          </div>
+          <!-- 最新消息section -->
+          <div class="section-1">
+            <div class="title mt-5 mb-4">
+              <span>觀看影片</span>
+            </div>
+            <div class="text-18-dark m-4">
+              課程影片、活動影片，及YouTube 或 Product Video等
+            </div>
+
+            <!-- slider輪播牆  -->
+            <div class="slider">
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+
+              <div class="slider-item">
+                <a class="index-pic" href="lecture-youtube.html">
+                  <img
+                    alt=""
+                    src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+                  />
+                </a>
+                <a class="index-content" href="lecture-youtube.html">
+                  <p class="videoDate">2022-07-15</p>
+                  <p class="videoIntro">
+                    Ansys IC 設計驗證系列論壇 - #2 3D
+                    時代的封裝設計與先進製程...
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="yellow-btn"
+              onclick="location.href='login.html'"
+            >
+              更多影片
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="footer-container">
+        <div class="footer-wrap">
+          <div class="footer-menu">
+            <div class="footer-icon">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-line"></i></a>
+            </div>
+            <div class="footer-news-wrap">
+              <a href="#" class="footer-news-btn">接收 Ansys 的最新消息 ▶</a>
+            </div>
+          </div>
+
+          <div class="footer-img-wrap">
+            <img src="/images/SSLSeal.gif" alt="" />
+          </div>
+
+          <div class="footer-text">
+            <div class="copy-right">
+              <p>© 2012 Copyright All rights reserved.</p>
+            </div>
+            <div class="policy">
+              <a href="#">法律聲明</a>
+              <a href="#">隱私權聲明</a>
+              <a href="#">Cookie 政策</a>
+              <a href="#">出口法規</a>
+              <a href="#">條款與條件</a>
+              <a href="#">舉報盜版</a>
+              <a href="#">網站地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 漢堡選單 -->
+    <script>
+      $(document).ready(() => {
+        $(".hamBar").click(function () {
+          //避免 a 標籤會觸發
+          // event.preventDefault();
+          //觸發展開收起來
+          $(".header__nav").toggleClass("show");
+        });
+        $(".header__nav li a").click(function () {
+          //移除class，才會讓 menu 消失
+          $(".header__nav").removeClass("show");
+        });
+      });
+    </script>
+
+    <!-- 首頁輪播牆  -->
+    <script>
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+      });
+      $(".play").on("click", function () {
+        owl.trigger("play.owl.autoplay", [1000]);
+      });
+      $(".stop").on("click", function () {
+        owl.trigger("stop.owl.autoplay");
+      });
+    </script>
+
+    <!-- 內文區的輪播牆  -->
+    <script>
+      $(".slider").slick({
+        autoplay: false,
+        dots: true,
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        customPaging: function (slider, i) {
+          var thumb = $(slider.$slides[i]).data();
+          return '<a class="dot">' + i + "</a>";
+        },
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              dots: true,
+              arrows: true,
+              infinite: false,
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              dots: true,
+              arrows: true,
+              infinite: false,
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              dots: true,
+              arrows: true,
+              infinite: false,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
