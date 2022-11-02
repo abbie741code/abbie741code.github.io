@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 引用bootstrap -->
+    <link
+      rel="stylesheet"
+      href="/bootstrap-4.2.1-dist/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <!--⭐️ 已整理-連到本機的文件 -->
+    <!-- 引用slick -->
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="/slick-1.8.1/slick/slick.js"></script>
+  
+    
+
+
+    <style>
+      * {
+        outline: 1px solid rgb(109, 112, 207);
+      }
+
+      .slider {
+        /* max-width: 1920px; */
+        margin: 30px 50px 50px;
+      }
+
+      .slider-item {
+        background: #c9dfe3;
+        /* width: 275px;
+        height: 285px; */
+      }
+
+      .slick-slide {
+        margin: 20px;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: #333333;
+      }
+
+      .slick-dots {
+        bottom: -30px;
+        display: none;
+      }
+      a.dot {
+        padding: 10px 10px;
+      }
+      a.dot:hover {
+        /* background: #ddd; */
+        color: #ccc;
+      }
+
+      .slider-img-wrap {
+        width: 100%;
+      }
+
+      .slider-img-wrap img {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slider">
+      <div class="slider-item">
+        <a class="videoPic" href="lecture-youtube.html">
+          <img
+            alt=""
+            src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+          />
+        </a>
+        <a class="videoContent" href="lecture-youtube.html">
+          <p class="videoDate">2022-07-15</p>
+          <p class="videoIntro">
+            Ansys IC 設計驗證系列論壇 - #2 3D 時代的封裝設計與先進製程...
+          </p>
+        </a>
+      </div>
+
+      <div class="slider-item">
+        <a class="videoPic" href="lecture-youtube.html">
+          <img
+            alt=""
+            src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+          />
+        </a>
+        <a class="videoContent" href="lecture-youtube.html">
+          <p class="videoDate">2022-07-15</p>
+          <p class="videoIntro">
+            Ansys IC 設計驗證系列論壇 - #2 3D 時代的封裝設計與先進製程...
+          </p>
+        </a>
+      </div>
+
+      <div class="slider-item">
+        <a class="videoPic" href="lecture-youtube.html">
+          <img
+            alt=""
+            src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+          />
+        </a>
+        <a class="videoContent" href="lecture-youtube.html">
+          <p class="videoDate">2022-07-15</p>
+          <p class="videoIntro">
+            Ansys IC 設計驗證系列論壇 - #2 3D 時代的封裝設計與先進製程...
+          </p>
+        </a>
+      </div>
+
+      <div class="slider-item">
+        <a class="videoPic" href="lecture-youtube.html">
+          <img
+            alt=""
+            src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+          />
+        </a>
+        <a class="videoContent" href="lecture-youtube.html">
+          <p class="videoDate">2022-07-15</p>
+          <p class="videoIntro">
+            Ansys IC 設計驗證系列論壇 - #2 3D 時代的封裝設計與先進製程...
+          </p>
+        </a>
+      </div>
+
+      <div class="slider-item">
+        <a class="videoPic" href="lecture-youtube.html">
+          <img
+            alt=""
+            src="http://img.youtube.com/vi/qQ8eaBaTEt4/mqdefault.jpg"
+          />
+        </a>
+        <a class="videoContent" href="lecture-youtube.html">
+          <p class="videoDate">2022-07-15</p>
+          <p class="videoIntro">
+            Ansys IC 設計驗證系列論壇 - #2 3D 時代的封裝設計與先進製程...
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <span class="pagingInfo"></span>
+
+    <script>
+      $(".slider").slick({
+        autoplay: false,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        customPaging: function (slider, i) {
+          var thumb = $(slider.$slides[i]).data();
+          return '<a class="dot">' + i + "</a>";
+        },
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              dots: true,
+              arrows: false,
+              infinite: false,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

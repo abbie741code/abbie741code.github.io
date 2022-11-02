@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- 表格欄位先決 start-->
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css" />
+    <!-- 表格欄位先決 end-->
+
+    <!-- 表格RWD start-->
+    <link rel="stylesheet" href="css/dcf-responsive-table.css" />
+    <!-- 表格RWD end-->
+
+    <!-- 引用bootstrap -->
+    <link
+      rel="stylesheet"
+      href="bootstrap/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <!-- 套用font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- 引用favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- 套用bo-resource的格式與css js -->
+
+    <title>Ansys資源網站-資源下載-new</title>
+
+    <style>
+      * {
+        /* outline: 1px solid rgb(221, 144, 144); */
+      }
+
+      .outline {
+        border: 1px solid #ffb71b;
+      }
+
+      thead,
+      th,
+      td,
+      tr {
+        border: 1px solid #ffb71b!important;  
+        padding: 10px;
+      }
+
+      .underline {
+        text-decoration: underline;
+      }
+
+      .white-space{
+        white-space: nowrap !important;
+      }
+      
+    </style>
+  </head>
+
+  <body class="otherPage">
+    <header>
+      <div class="header-inner">
+        <div class="header-inner-left">
+          <div class="logo-img">
+            <a href="index.html"><img src="images/logo-03.png" /></a>
+            <a href="index.html"><img src="images/logo-02.png" /></a>
+          </div>
+          <div class="search-wrap">
+            <input type="text" placeholder="Search.." />
+            <span class="icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+          </div>
+        </div>
+
+        <ul class="header__nav">
+          <!-- 下拉式選單中的註冊與登入按鈕  -->
+          <li class="nav__item phone-btn">
+            <div class="header-btn phone-btn">
+              <a class="mr-2 register-btn" href="0-2-register.html">註冊</a>
+              <a class="login-btn" href="0-1-login.html">登入</a>
+            </div>
+          </li>
+
+          <li class="nav__item">
+            <a href="5-1-calendar.html" title="1">課程行事曆</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="1-1-LatestActivity.html" title="2">最新活動</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="2-1-film.html" title="3">觀看影片</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="3-1-download.html" title="4">資源下載</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="4-1-LatestNews.html" title="5"> 最新消息</a>
+          </li>
+
+          <!-- 下拉式選單中的search bar  -->
+          <li class="nav__item">
+            <div class="search-wrap-phone">
+              <div>
+                <input type="text" placeholder="Search.." />
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="header-inner-right">
+          <div class="header-btn">
+            <a class="register-btn" href="0-2-register.html">註冊</a>
+            <a class="login-btn" href="0-1-login.html">登入</a>
+          </div>
+
+          <div class="link-left ml-4">
+            <div class="yellow-line"></div>
+            <div class="ml-2 user-btn">小狗勾</div>
+            <a class="ml-2 logout-btn" href="index.html">登出 </a>
+          </div>
+        </div>
+
+        <a class="hamBar" href="#"><i class="fas fa-bars"></i></a>
+      </div>
+      <div class="deco-arrow adjust-bottom"></div>
+    </header>
+
+    <!-- 內文 -->
+    <div class="content-container">
+      <div class="content-wrap">
+        <div class="title margin">
+          <span>簡報下載</span>
+        </div>
+
+        <!-- search bar -->
+        <form action="">
+          <p>請選擇主題</p>
+
+          
+
+          <input id="" name="" placeholder="請輸入關鍵字" type="text" />
+
+         
+        </form>
+
+        <!-- 簡報表格區 -->
+        <table id="example" class="display outline" style="width: 100%">
+          <thead class="thead-font">
+            <tr>
+              <th scope="col" data-label="類型">上傳日期</th>
+              <th scope="col" data-label="內容說明">標題</th>
+              <th scope="col" data-label="分享者">下載</th>
+              <th scope="col" data-label="發文日期">影片</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/28</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+
+            <tr style="cursor: pointer">
+              <td data-label="類型">2022/10/30</td>
+              <td data-label="內容說明" class="underline">
+                <a target="_blank" href="#">
+                  2022 Ansys 用戶技術大會：國立成功大學 謝旻甫|
+                  以旋轉永久磁鐵磁極方向進行調磁之車用永磁同步馬達
+                </a>
+              </td>
+              <td data-label="分享者" class="underline">
+                <div>下載簡報 <i class="fa-regular fa-circle-down"></i></div>
+              </td>
+              <td data-label="發文日期" class="underline">
+                <a target="_blank" href="#">相關影片 </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-wrap">
+          <div class="footer-menu">
+            <div class="footer-icon">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-line"></i></a>
+            </div>
+            <div class="footer-news-wrap">
+              <a href="4-1-LatestNews.html" class="footer-news-btn"
+                >接收 Ansys 的最新消息 ▶</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-img-wrap">
+            <img src="images/SSLSeal.gif" alt="" />
+          </div>
+
+          <div class="footer-text">
+            <div class="copy-right">
+              <p>© 2012 Copyright All rights reserved.</p>
+            </div>
+            <div class="policy">
+              <a href="#">法律聲明</a>
+              <a href="#">隱私權聲明</a>
+              <a href="#">Cookie 政策</a>
+              <a href="#">出口法規</a>
+              <a href="#">條款與條件</a>
+              <a href="#">舉報盜版</a>
+              <a href="#">網站地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+  <!-- 引用google host JQ CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- 漢堡選單 -->
+  <script>
+    $(document).ready(() => {
+      $(".hamBar").click(function () {
+        //避免 a 標籤會觸發
+        event.preventDefault();
+        //觸發展開收起來
+        $(".header__nav").toggleClass("show");
+      });
+      $(".header__nav li a").click(function () {
+        //移除class，才會讓 menu 消失
+        $(".header__nav").removeClass("show");
+        //以下是滾動動畫
+        // var sectionTitle = this.title;
+        // console.log(sectionTitle);
+        // var sectionId = "#section--" + sectionTitle;
+        // console.log(sectionId);
+        // var scrollPoint = $(sectionId).offset().top;
+        // var lastScrollPoint = scrollPoint - 100;
+        // $("html,body").animate({ scrollTop: lastScrollPoint }, 800);
+      });
+    });
+  </script>
+
+  <!-- 篩選功能 -->
+  <script>
+    $("label").click(function () {
+      // $(this).trigger('click');
+    });
+
+    let checkList = [];
+
+    //當按下tag按鈕時
+    $("input").click(function () {
+      var type = $(this).attr("value");
+      var checked = $(this).prop("checked");
+      // console.log(type)
+
+      //假設該tag按鈕被反checked
+      if (!checked) {
+        $("." + type).hide(500);
+        console.log(type + "55");
+
+        //找出和type一樣的物件,定義為searchTag
+        const searchTag = (element) => element == type;
+        // console.log(checkList.findIndex(searchTag));
+
+        //找出searchTag在checkList是第幾位,定義為tagNumber
+        const tagNumber = checkList.findIndex(searchTag);
+        // console.log(tagNumber)
+
+        //將checkList中的tagNumber刪除
+        checkList.splice(tagNumber, 1);
+        // console.log(checkList)
+
+        for (let i = 0; i < checkList.length; i++) {
+          $("." + checkList[i]).show(500);
+        }
+      } else {
+        //假設該tag按鈕被checked
+        $("." + type).show(500);
+        checkList.push(type);
+        // console.log(type + '66')
+        // console.log(checkList)
+      }
+
+      //在「ALL按鈕」被checked的情況下，按了「其他按鈕」，
+      //先將「ALL按鈕」的checked刪除，並將所有box清空，
+      //再重新show出被點選按鈕的box
+      if ($(".input-kw-all").prop("checked")) {
+        if (type !== "kw-all") {
+          // console.log('input-kw-all')
+          $(".kw-all").hide(500);
+          $(".input-kw-all").prop("checked", false);
+          $("." + type).show(500);
+        }
+      }
+
+      //判斷是否有「其他按鈕」被checked
+      var isChecked = $(".input-kw-other:checked").length > 0;
+      console.log(isChecked);
+
+      //在有「其他按鈕」被checked的情況下，按了「ALL按鈕」，
+      //先將「其他按鈕」的checked刪除，
+      //再show全部box
+      if (isChecked) {
+        if (type === "kw-all") {
+          // console.log('input-kw-other')
+          $(".input-kw-other").prop("checked", false);
+          $(".kw-all").show(500);
+          checkList = [];
+        }
+      }
+
+      // //在「其他按鈕」被checked的情況下，按了「ALL按鈕」，
+      // //先將「其他按鈕」的checked刪除，
+      // //再show全部box
+      // if ($('.input-kw-other').prop("checked")) {
+      //   // console.log($('.input-kw-other').prop("checked"))
+      //   if (type === 'kw-all') {
+      //     // console.log('input-kw-other')
+      //     $('.input-kw-other').prop('checked', false);
+      //     $('.kw-all').show(500);
+      //     checkList = []
+      //   }
+      // }
+    });
+  </script>
+
+  <!---11/1---->
+	<!-- 表格欄位先決 -->	
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.responsive.min.js"></script>
+
+  <!-- 裁切字 -->
+	<script>
+		//限制欄位的內容字數, 剩下用...代替(需搭配下方的function)
+		$.fn.dataTable.render.ellipsis = function ( cutoff ) {
+    return function ( data, type, row ) {
+        return type === 'display' && data.length > cutoff ?
+            data.substr( 0, cutoff ) +'…' :
+            data;
+				}
+		};
+	</script>
+	
+	<!-- 分頁 -->
+	<script>
+		$(document).ready(function () {
+			$('#example').DataTable({
+				// "paging": false,
+				// "ordering": false, 
+				"order": [[ 3, "asc" ]],//指定想要優先排序的欄位, 若無則false
+				"info": false,
+				"searching": false,
+				"lengthChange": false,
+				"pageLength":10,
+				"language": {
+					"paginate": {
+						"previous": "&lt;",
+						"next": "&gt;"
+					}
+				},
+				columnDefs: [ 
+					{
+						targets: 1,//要做用在第幾欄
+						render: $.fn.dataTable.render.ellipsis(１20)
+						//搭配上面的function
+					}
+				],
+				responsive: {
+					details: {
+						display: $.fn.dataTable.Responsive.display.childRowImmediate,
+						type: 'none',
+						target: ''
+					}
+				}
+			});
+		});
+	</script>
+</html>

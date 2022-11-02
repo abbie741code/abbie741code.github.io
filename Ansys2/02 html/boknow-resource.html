@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOKNOWLEDGE</title>
+
+    <!-- 表格欄位先決 start-->
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css" />
+    <!-- 表格欄位先決 end-->
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header-know.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/boknowledge.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+
+		<style>
+			*{
+				outline: 1px solid rgb(165, 175, 207);
+			}
+		</style>
+  </head>
+
+  <body id="menu-cover">
+    <header></header>
+    <div class="blank"></div>
+
+    <div class="search-out">
+      <form class="search">
+        <label class="search-input" for="search-keyword-text">
+          <div class="search-keyword-pick-wrap">
+            <input
+              type="text"
+              class="search-keyword-text"
+              id="search-keyword-text"
+              name="search-keyword-text"
+              placeholder="輸入資源關鍵字..."
+            />
+          </div>
+        </label>
+        <div
+          class="btn-search"
+          onclick="location.href='javascript:;';"
+          style="cursor: pointer"
+        >
+          <img src="images/btn-search.svg" />
+        </div>
+        <div class="search-keyword">
+          <div class="keyword-range">
+            <div class="keyword-range-title">資源類型<span>|</span></div>
+            <div class="keyword-range-detail keyword-range-detail3"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="bow-search"></div>
+
+    <div class="content-leave content-leave-wide">
+      <div class="leave-catch">
+        <h4>
+          資源分享<a href="resource-add.php"
+            ><i class="fa fa-plus" aria-hidden="true"></i
+          ></a>
+        </h4>
+      </div>
+
+			<!-- 表格區 -->
+      <table id="example" class="display nowrap" style="width: 100%">
+        <thead>
+          <tr>
+            <th scope="col" data-label="類型">類型</th>
+            <th scope="col" data-label="內容說明">標題</th>
+            <th scope="col" data-label="分享者">分享者</th>
+            <th scope="col" data-label="發文日期">發文日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">設計素材</td>
+            <td data-label="內容說明">二南堂書法堂書法字字體下載</td>
+            <td data-label="分享者">Sigur Lin</td>
+            <td data-label="發文日期">2020/5/3</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">內部公告</td>
+            <td data-label="內容說明">C4D渲染功能技法-空間燈光</td>
+            <td data-label="分享者">Jason Lin</td>
+            <td data-label="發文日期">2020/5/3</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">線上課程</td>
+            <td data-label="內容說明">
+              Adobe XD設計實務-成為UI設計師的8項核心技能
+            </td>
+            <td data-label="分享者">Jason Lin</td>
+            <td data-label="發文日期">2020/5/2</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">設計素材</td>
+            <td data-label="內容說明">二南堂書法字體下載</td>
+            <td data-label="分享者">Sigur Lin</td>
+            <td data-label="發文日期">2020/5/2</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">影片教學</td>
+            <td data-label="內容說明">C4D渲染功能技法-空間燈光</td>
+            <td data-label="分享者">Jason Lin</td>
+            <td data-label="發文日期">2020/5/1</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">線上課程</td>
+            <td data-label="內容說明">
+              Adobe XD設計實務-成為UI設計師的8項核心技能
+            </td>
+            <td data-label="分享者">Jason Lin</td>
+            <td data-label="發文日期">2020/5/1</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">設計素材</td>
+            <td data-label="內容說明">二南堂書法字體下載</td>
+            <td data-label="分享者">Sigur Lin</td>
+            <td data-label="發文日期">2020/4/25</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">影片教學</td>
+            <td data-label="內容說明">C4D渲染功能技法-空間燈光</td>
+            <td data-label="分享者">Jason Lin</td>
+            <td data-label="發文日期">2020/4/23</td>
+          </tr>
+
+          <tr
+            onclick="location.href='resource-0001.php';"
+            style="cursor: pointer"
+          >
+            <td data-label="類型">內部公告</td>
+            <td data-label="內容說明">
+              Adobe XD設計實務-成為UI設計師的8項核心技能
+            </td>
+            <td data-label="分享者">Jason Lin</td>
+            <td data-label="發文日期">2020/4/21</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+    <!-- 表格欄位先決 -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+
+    <script>
+      //限制欄位的內容字數, 剩下用...代替(需搭配下方的function)
+      $.fn.dataTable.render.ellipsis = function (cutoff) {
+        return function (data, type, row) {
+          return type === "display" && data.length > cutoff
+            ? data.substr(0, cutoff) + "…"
+            : data;
+        };
+      };
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable({
+          // "paging": false,
+          // "ordering": false,
+          order: [[3, "asc"]], //指定想要優先排序的欄位, 若無則false
+          info: false,
+          searching: false,
+          lengthChange: false,
+          pageLength: 10,
+          language: {
+            paginate: {
+              previous: "&lt;",
+              next: "&gt;",
+            },
+          },
+          columnDefs: [
+            {
+              targets: 1, //要做用在第幾欄
+              render: $.fn.dataTable.render.ellipsis(20),
+              //搭配上面的function
+            },
+          ],
+          responsive: {
+            details: {
+              display: $.fn.dataTable.Responsive.display.childRowImmediate,
+              type: "none",
+              target: "",
+            },
+          },
+        });
+      });
+    </script>
+
+    <!-- 搜尋框 -->
+    <script src="js/search-resource.js"></script>
+  </body>
+</html>

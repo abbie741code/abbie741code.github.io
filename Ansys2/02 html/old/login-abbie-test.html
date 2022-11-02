@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <!-- 套用font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 引用bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+
+  <title>8/17 logging page</title>
+  <style>
+    * {
+      outline: 1px solid rgb(221, 144, 144);
+      text-decoration: none !important; 
+    }
+  </style>
+</head>
+
+<body class="otherPage body">
+  <div class="menuBack"></div>
+  <div class="proclamation nonBg close">
+    <div class="proclamation-wrap">
+      <div class="proclamation-content">
+        <div class="proclamation-close"></div>
+        <p>
+          您的密碼為您的手機號碼
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- desktop navbar -->
+  <header class="desktop-navbar">
+    <div class="header-inner">
+      <div class="header-inner-left">
+        <div class="logo">
+          <div class="logo-img">
+            <a href="index.html">
+              <img alt="Ansys" src="images/logo.svg"></a>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <input type="text" placeholder="Search..">
+          <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+      </div>
+
+      <div class="header-inner-right ">
+        <div class="menu">
+          <div class="menu-list">
+            <a>課程行事曆</a>
+            <a>最新活動</a>
+            <a>觀看影片</a>
+            <a>資源下載</a>
+            <a>最新消息</a>
+          </div>
+
+          <div>
+            <button type="button" class="btn btn-dark mr-1" onclick="location.href='login.html'">註冊</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='register.html'">登入</button>
+          </div>
+
+          <div>
+            <div class="link-right"></div>
+            <div>Jack</div>
+            <div>登出</div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- header底下的黑黃條 -->
+    <div class="deco-arrow"> </div>
+  </header>
+
+  <!-- phone navbar -->
+  <header class="phone-navbar">
+    <div class="header-inner-left">
+      <div class="logo">
+        <div class="logo-img">
+          <a href="index.html">
+            <img alt="Ansys" src="images/logo.svg"></a>
+        </div>
+      </div>
+    </div>
+    <div class="phone-navbar-right">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <!-- header底下的黑黃條 -->
+    <div class="deco-arrow"> </div>
+  </header>
+
+
+
+
+  <!-- 登入section -->
+  <div class="content form">
+    <h3>登入</h3>
+    <div class="blank-alert">
+      <i class="far fa-times-circle"></i> 驗證碼錯誤! <br>
+      <i class="far fa-times-circle"></i> 驗證碼錯誤!
+    </div>
+    <form action="">
+      <div class="blank">請輸入e-mail</div>
+      <input type="email" name="" id="">
+      <div class="blank">請輸入密碼</div>
+      <input type="password" name="" id="">
+
+      <!-- <button class="btn-basic">登入</button> -->
+      <div class="btn-wrap">
+        <a href="search.html" class="btn-basic">登入</a>
+      </div>
+
+    </form>
+    <div class="switch">
+      <a href="register.html">切換至註冊</a>/
+      <a href="javascript:;" id="announce">忘記密碼</a>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-menu">
+        <div class="footer-icon">
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footer-news">
+          <button type="button" class="btn btn-outline-warning">接收 Ansys 的最新消息 ▶</button>
+        </div>
+      </div>
+
+      <div class="footer-img-wrap">
+        <img src="/images/SSLSeal.gif" alt="">
+      </div>
+
+      <div class="footer-text">
+        <p>© 2012 Copyright All rights reserved.</p>
+        <p>© 2012 Copyright All rights reserved.</p>
+      </div>
+
+  </footer>
+
+  <script>
+    let announce = document.getElementById('announce');
+    let proclamationClose = document.getElementsByClassName('proclamation-close')[0];
+    let proclamation = document.getElementsByClassName('proclamation')[0];
+    let body = document.getElementsByClassName('body')[0];
+
+    // proclamation.classList.toggle('close');
+    // body.classList.toggle('menuStock');
+
+    announce.addEventListener('click', function () {
+      proclamation.classList.toggle('close');
+      body.classList.toggle('menuStock');
+
+    });
+    proclamationClose.addEventListener('click', function () {
+      proclamation.classList.toggle('close');
+      body.classList.toggle('menuStock');
+
+    });
+  </script>
+</body>
+
+</html>

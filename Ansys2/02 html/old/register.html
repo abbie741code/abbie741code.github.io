@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body class="otherPage body">
+  <div class="menuBack"></div>
+  <div class="proclamation nonBg close">
+    <div class="proclamation-wrap">
+      <div class="proclamation-content">
+        <div class="proclamation-close"></div>
+        <p>
+          您的密碼為您的手機號碼
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-img">
+          <a href="index.html">
+            <img alt="Ansys" src="images/logo.svg"></a>
+
+        </div>
+      </div>
+      <div class="UGM-btn-wrap">
+        <a href="2020UGM.html" class="btn-UGM">2020 UGM</a>
+      </div>
+      <div class="menu">
+        <a href="login.html">登入</a>/
+        <a href="register.html" style="text-decoration: underline;">註冊</a>
+      </div>
+
+    </div>
+    <div class="deco-arrow"></div>
+  </header>
+  <div class="content form">
+    <h3>請填寫註冊資料</h3>
+    <div class="blank-alert">
+      <i class="far fa-times-circle"></i> 驗證碼錯誤! <br>
+      <i class="far fa-times-circle"></i> 驗證碼錯誤!
+    </div>
+    <form action="">
+      <div class="blank">姓名</div>
+      <input type="text" name="" id="">
+      <div class="blank">職稱</div>
+      <input type="text" name="" id="">
+      <div class="blank">部門</div>
+      <input type="text" name="" id="">
+      <div class="blank">電話</div>
+      <input type="tel" name="" id="">
+      <div class="blank">分機</div>
+      <input type="tel" name="" id="">
+      <div class="blank">手機</div>
+      <input type="tel" name="" id="">
+      <div class="blank">E-mail</div>
+      <div class="blank-detail">*恕不接受yahoo, gmail等非公司帳號</div>
+      <input type="email" name="" id="">
+      <div class="blank">驗證碼</div>
+      <div class="input-wrap">
+        <input type="tel" name="" id="">
+        <a href="javascript:;" class="checkCode">寄出驗證碼</a>
+      </div>
+
+
+      <button class="btn-basic">註冊</button>
+    </form>
+    <div class="switch">
+      <a href="login.html">切換至登入</a>
+    </div>
+
+
+  </div>
+  <footer>
+    <span>© 2021 Ansys 台灣 All rights reserved.</span>
+  </footer>
+
+
+
+  <script>
+    let announce = document.getElementById('announce');
+    let proclamationClose = document.getElementsByClassName('proclamation-close')[0];
+    let proclamation = document.getElementsByClassName('proclamation')[0];
+    let body = document.getElementsByClassName('body')[0];
+
+    // proclamation.classList.toggle('close');
+    // body.classList.toggle('menuStock');
+
+    announce.addEventListener('click', function () {
+      proclamation.classList.toggle('close');
+      body.classList.toggle('menuStock');
+
+    });
+    proclamationClose.addEventListener('click', function () {
+      proclamation.classList.toggle('close');
+      body.classList.toggle('menuStock');
+
+    });
+  </script>
+</body>
+
+</html>

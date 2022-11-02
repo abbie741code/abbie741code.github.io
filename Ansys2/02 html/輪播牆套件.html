@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>滚动轮播</title>
+</head>
+
+<style type="text/css">
+	body {
+		background-color: cornflowerblue;
+	}
+
+	._container {
+		height: 36px;
+		overflow: hidden;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+		margin: 300px auto;
+		padding: 0;
+	}
+
+	._container li {
+		height: 36px;
+		line-height: 36px;
+		font-size: 18px;
+		color: #fff;
+	}
+
+	._container li:first-child {
+		margin-top: 0;
+		transition: margin-top 1s;
+	}
+</style>
+
+<body>
+	<ul class="_container" id="demo">
+		<li>第一条消息</li>
+		<li>第二条消息</li>
+		<li>第三条消息</li>
+		<li>第四条消息</li>
+		<li>第五条消息</li>
+		<li>第六条消息</li>
+	</ul>
+
+</body>
+
+
+<script type="text/javascript">
+	/*启动方式*/
+	/*
+	 * demo 父容器(ul)的
+	 * _h 子元素li的高度
+	 * interval  滚动间隔时间
+	 * transition轮播动画时间
+	 */
+	function Scroll() {}
+	Scroll.prototype.upScroll = function (dom, _h, interval) {
+		var dom = document.getElementById(dom);
+		var _heigth = "-" + _h + 'px'
+		var _field = dom.firstElementChild;
+		_field.style.marginTop = _heigth;
+		setInterval(function () {
+			var _field = dom.firstElementChild;
+			_field.style.marginTop = "0px";
+			dom.appendChild(_field);
+			var _field = dom.firstElementChild
+			_field.style.marginTop = _heigth;
+		}, interval)
+	}
+	var myScroll = new Scroll();
+	myScroll.upScroll("demo", 36, 3000);
+</script>
+
+</html>
+————————————————
+版权声明：本文为CSDN博主「码上就来」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_42513555/article/details/113759996
