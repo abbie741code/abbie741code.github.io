@@ -1,0 +1,369 @@
+/* .header-event{
+	width: 90%;
+	margin: 0 auto;
+	padding: 36px 0px 35px 0px;
+} 
+
+@media screen and (min-width: 1200px){
+	.header-event{
+		width: 1100px;
+	} 
+} */
+.event-content{
+	padding-top: 0px;
+}
+.content > .event-wrap{
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+.content > .event-wrap > .kv{
+	background: url('../images/event/banner.jpg') no-repeat center center;
+	background-size: cover;
+	padding-top: 140%;
+	height: 0;
+	position: relative;
+}
+
+@media screen and (min-width: 415px){
+	.content > .event-wrap > .kv{
+		padding-top: 100%;
+	}
+}
+@media screen and (min-width: 700px){
+	.content > .event-wrap > .kv{
+		padding-top: 60%;
+	}
+}
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .kv{
+		padding-top: 45.7%;
+	}
+}
+
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .kv{
+		background: url('../images/event/banner.jpg') no-repeat center center;
+		background-size: cover;
+		padding-top: 45.7%;
+		height: 0;
+		position: relative;
+	}
+}
+@media screen and (min-width: 1366px){
+	.content > .event-wrap > .kv{
+		padding-top: 36%;
+	}
+}
+@media screen and (min-width: 1920px){
+	.content > .event-wrap > .kv{
+		padding-top: 32.7%;
+	}
+}
+
+.content > .event-wrap > .kv > .dark-block{
+	background-color: rgba(0, 0, 0, .7);
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	padding: 40px 0px 40px 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+@media screen and (min-width: 320px){
+	.content > .event-wrap > .kv > .dark-block{
+		margin-top: 90px;
+	}
+}
+.content > .event-wrap > .kv > .dark-block > h2{
+	font-size: 25px;
+	line-height: 37px;
+	width: 88%;
+	margin: 0 auto;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 415px){
+	.content > .event-wrap > .kv > .dark-block > h2{
+		font-size: 35px;
+		line-height: 47px;
+	}
+}
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .kv > .dark-block > h2{
+		font-size: 40px;
+		line-height: 77px;
+	} 
+}
+@media screen and (min-width: 1366px){
+	.content > .event-wrap > .kv > .dark-block > h2{
+		font-size: 50px;
+	} 
+}
+
+.content > .event-wrap > .kv > .dark-block > p{
+	font-size: 18px;
+	line-height: 30px;
+	width: 88%;
+	margin: 0 auto;
+	font-weight: normal;
+}
+
+@media screen and (min-width: 415px){
+	.content > .event-wrap > .kv > .dark-block > p{
+		font-size: 20px;
+		line-height: 38px;
+	}
+}
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .kv > .dark-block > p{
+		font-size: 25px;
+		line-height: 43px;
+	}
+}
+@media screen and (min-width: 1366px){
+	.content > .event-wrap > .kv > .dark-block > p{
+		font-size: 33px;
+		line-height: 50px;
+	}
+}
+.btn-event-contact{
+	width: 190px;
+	height: 50px;
+	border: 3px solid #fff;
+	margin: 35px auto 0px auto;
+	border-radius: 48px;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+.btn-left{
+	margin: 35px 0px 0px 0px;
+}
+.btn-blue{
+	margin: 35px 0px 0px 0px;
+	border: 3px solid #008B97;
+	background-color: #008B97;
+}
+
+.ad-event-btn{
+	margin: 20px 0px 0px 0px;
+}
+
+.content > .event-wrap > .event-introduction > p{
+	font-size: 22px;
+	line-height: 38px;
+	color: #585858;
+	width: 85%;
+	margin: 42px auto;
+	/* outline: 1px solid #F00; */
+}
+@media screen and (min-width: 768px){
+	.content > .event-wrap > .event-introduction > p{
+		width: 60%;
+	}
+}
+.content > .event-wrap > .event-introduction{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .event-introduction{
+		flex-wrap: nowrap;
+	}
+}
+
+@media screen and (min-width: 1280px){
+	.content > .event-wrap > .event-introduction{
+		flex-wrap: nowrap;
+	}
+}
+.content > .event-wrap > .reverse {
+	flex-direction: column-reverse;
+
+}
+@media screen and (min-width: 919px){
+.content > .event-wrap > .reverse {
+	flex-direction: row;
+
+}
+}
+
+.content > .event-wrap > .event-introduction > .event-introduction-01 {
+	width: 100%;
+	height: 490px;
+	background-color: #008B97;
+	color: #fff;
+	padding: 55px 5% 20px 5%;
+	box-sizing: border-box;
+
+}
+
+@media screen and (min-width: 376px){
+	.content > .event-wrap > .event-introduction > .event-introduction-01 {
+		width: 100%;
+		height: 470px;
+		background-color: #008B97;
+		color: #fff;
+		padding: 55px 7% 20px 7%;
+		box-sizing: border-box;
+	}
+}
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .event-introduction > .event-introduction-01 {
+		width: 50%;
+		height: 483px;
+		padding: 75px 7% 45px 7%;
+	}
+
+}
+.content > .event-wrap > .event-introduction > .event-introduction-01 > h3{
+	font-size: 32px;
+	line-height: 44px;
+	font-weight: bold;
+}
+.content > .event-wrap > .event-introduction > .event-introduction-01 > p {
+	font-size: 18px;
+	line-height: 30px;
+	padding-top: 30px;
+}
+
+.content > .event-wrap > .event-introduction > .bg-w {
+	background-color: #fff;
+	color: #008B97;
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02{
+	width: 100%;
+	height: 280px;
+	/* outline: 1px solid #F00; */
+}
+@media screen and (min-width: 480px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02{
+		width: 100%;
+		height: 350px;
+	}
+}
+
+@media screen and (min-width: 600px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02{
+		width: 100%;
+		height: 450px;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02{
+		width: 100%;
+		height: 400px;
+	}
+}
+
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02{
+		width: 50%;
+		height: 483px;
+	}
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02-img01{
+	background: url('../images/event/img1.jpg') no-repeat center center;
+	background-size: cover;
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02-img02{
+	position: relative;
+	/* outline: 1px solid #F00; */
+}
+
+
+.content > .event-wrap > .event-introduction > .event-introduction-02-img02 > .img02-inner{
+	width: 70%;
+	position: absolute;
+	top: -40px;
+	right: auto;
+	left: 15%;
+	z-index: 8;
+	/* outline: 1px solid #F00; */
+}
+@media screen and (min-width: 768px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02-img02 > .img02-inner{
+		width: auto;
+		position: absolute;
+		right: auto;
+		left: 25%;
+	}
+}
+@media screen and (min-width: 919px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02-img02 > .img02-inner{
+		position: absolute;
+		right: 120px;
+		left: auto;
+	}
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02-img02 > .img02-inner > img{
+	width: 120%;
+}
+@media screen and (min-width: 600px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02-img02 > .img02-inner > img{
+		width: auto;
+	}
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02-img03{
+	background: url('../images/event/img3.jpg') no-repeat center center;
+	background-size: cover;
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02-img04{
+	position: relative;
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02-img04 > .img04-inner{
+	width: 85%;
+	position: absolute;
+	top: 0px;
+	right: auto;
+	left: 5%;
+	z-index: 8;
+	text-align: center;
+	/* outline: 1px solid #F00; */
+
+}
+@media screen and (min-width: 768px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02-img04 > .img04-inner{
+		width: 70%;
+		position: absolute;
+		right: auto;
+		left: 20%;
+	}
+}
+@media screen and (min-width: 1024px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02-img04 > .img04-inner{
+		position: absolute;
+		right: 120px;
+		left: auto;
+		/* outline: 1px solid #F00; */
+	}
+}
+.content > .event-wrap > .event-introduction > .event-introduction-02-img04 > .img04-inner > img{
+	width: 100%;
+	text-align: right;
+}
+@media screen and (min-width: 600px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02-img04 > .img04-inner > img{
+		width: auto;
+	}
+}
+/* @media screen and (min-width: 919px){
+	.content > .event-wrap > .event-introduction > .event-introduction-02-img04 > .img04-inner > img{
+		width: 100%;
+	}
+} */
+.footer-blue{
+	border-top: 1px solid #008B97;
+}
+
+
+
+
+

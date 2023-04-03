@@ -1,0 +1,103 @@
+<head>
+  <!-- new -->
+  <link rel="stylesheet" href="css/reset-new.css" />
+  <link rel="stylesheet" href="css/stylesheet-new.css" />
+
+  <style>
+    /* *{
+      outline: 1px solid #b18787;
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- new-header -->
+  <header>
+    <input type="checkbox" name="" id="controller" />
+    <div class="wrap">
+      <div class="nav-wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/logo-header.svg"
+              width=""
+              alt="BORNA DESIGN 伯納廣告設計工作室"
+            />
+          </a>
+          <h1>Borna Marketing Design 伯納廣告設計工作室</h1>
+        </div>
+
+        <!-- 漢堡選單 -->
+        <label for="controller" class="menu" id="menu-control">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </label>
+
+        <div class="navigation">
+          <a href="index.html" class="">
+            <span class="dot"></span>
+            <span class="dot2"></span>Projects
+          </a>
+
+          <a href="about.html" class="">
+            <span class="dot"></span>
+            <span class="dot2"></span>about us
+          </a>
+
+          <a href="service.html">
+            <span class="dot"></span>
+            <span class="dot2"></span>service
+          </a>
+
+          <a href="talks.html">
+            <span class="dot"></span>
+            <span class="dot2"></span>we talks
+          </a>
+
+          <a href="hr.html">
+            <span class="dot"></span>
+            <span class="dot2"></span>join us
+          </a>
+
+          <a href="contact.html">
+            <span class="dot"></span>
+            <span class="dot2"></span>contact
+          </a>
+
+          <!-- facebook -->
+          <a
+            href="https://www.facebook.com/WeAreGoodPartner/?__tn__=kC-R&eid=ARCSRVHdYzdV0qBDEFiCVhhgTNY6AJUbfGMrnUnPc5zaO9Xez2fcP-T5ZCvYoAnNOEBpmbO_osZ-r3Os&hc_ref=ARTgW8wF46gLmdh2QyJ76Jdtsa7XSC-yhE2uC8W9Nwm1mcBVN5lH0m_SIzgOGn0swbs&fref=nf&__xts__[0]=68.ARBlW_s2ahCSuNEjNppciRsM0BtZ44ccEQ1g7ux7VjxyrHXCe3NwXD1s1xFac5D0_zlOHLGr4ZIZegeyA44lX2hjQ4Rrtvh62La3KD8NmR7gd4AQ_jHW7pZtxx-soMtto-H148Q1M6Pn-_rf_Xn2a5ytMupRNTWTpUKcC1s42lO1okHlibNDfmXa4TTMkmH8NeJyyBIVbXteuw37Aj08MB_Tz9q-bejemVNrQwP3xcCTMCieUG6eXM0YeBqowsVmnS3UygajvnnljAG95gAzdM5YicE96BFUqj2iPY7mUyT54_XDz7P3FRUZy7PL0Aa0x6e0GxNgn60IwdMPwEUrm74"
+            class="icon-fb"
+            target="_blank"
+          >
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 切換navbar的時候 在對應路由 給選項新增class -->
+  <script>
+    // 取得所有選項
+    const navLinks = document.querySelectorAll('.navigation a');
+   
+
+    console.log(navLinks)
+
+    // 監聽路由變化
+    window.addEventListener('hashchange', () => {
+      // 取得當前路由
+      const currentRoute = window.location.hash;
+      // 對應路由的選項新增 active class，其他選項移除 active class
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentRoute) {
+          link.classList.add('touch');
+        } else {
+          link.classList.remove('touch');
+        }
+        console.log(navLinks)
+      });
+    });
+  </script>
+</body>

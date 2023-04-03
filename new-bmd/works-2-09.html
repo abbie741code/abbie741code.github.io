@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UL國際電子展專案設計執行 - 伯納廣告設計工作室</title>
+    <meta
+      name="description"
+      content="伯納設計善於運用「同理心」，站在客戶的角度溝通與思考，發掘出隱藏問題並尋求最佳解方。伯納服務項目有：品牌設計，空間設計，網頁設計，活動場佈，印刷設計。"
+    />
+    <meta
+      property="og:title"
+      content="伯納設計 | UL - 國際電子展專案設計執行"
+    />
+    <meta
+      property="og:description"
+      content="本次設計概念主要希望傳達 UL 在客戶服務與檢測技術上的多層次及多面向：使用幾何多面體為輔助，象徵 UL 由點至線至面的全方位..."
+    />
+    <meta property="og:url" content="works-2-09.html" />
+    <meta property="og:image" content="images/work-2-09-fb.jpg" width="800" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- new -->
+    <link rel="stylesheet" href="css/reset-new.css" />
+    <link rel="stylesheet" href="css/stylesheet-new.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/anchor.js"></script>
+  </head>
+
+  <body>
+    <div id="up"></div>
+    <!-- new-header -->
+    <header>
+      <!-- load header.html -->
+    </header>
+    <div class="content">
+      <a class="toup" id="goTop" href="#up">
+        <span class="toup-bar toup-bar1"></span>
+        <span class="toup-bar toup-bar2"></span>
+      </a>
+      <div class="title">
+        <a href="index.html">PROJECTS</a>
+        <span class="title-deco">
+          <span class="title-deco2"></span>
+        </span>
+      </div>
+
+      <div class="col">
+        <div class="col-1 no-line">
+          <a class="close" href="index.html">
+            <span class="close-bar close-bar1"></span>
+            <span class="close-bar close-bar2"></span>
+          </a>
+
+          <h2>
+            UL - TAIPEI INTERNATIONAL ELECTRONICS SHOW PROJECT<br />
+            UL - 國際電子展專案設計執行
+          </h2>
+          <div class="col-works-2col">
+            <div class="col-works-2col-left">
+              <p>
+                UL 台灣，成立於 1988 年，是 UL
+                美國總部第一個在海外設置的授權實驗室。目前 UL
+                台灣的服務據點於台北，擁有亞太地區先進完備的測試檢驗設備及實驗室，提供亞洲及台灣市場更即時且在地化的檢測服務。<br /><br />
+                本次設計概念主要希望傳達 UL
+                在客戶服務與檢測技術上的多層次及多面向：使用幾何多面體為輔助，象徵
+                UL 由點至線至面的全方位。
+                <br /><br />
+              </p>
+              <span>_展場設計, 網頁設計, 活動設計</span>
+              <div
+                id="FB"
+                class="icon-fb-s"
+                onclick="location.href='javascript:;"
+              >
+                <span>SHARE ON </span>
+                <div class="icon-fb-s-img"></div>
+              </div>
+
+              <script>
+                $("#FB").on("click", function () {
+                  window.open(
+                    "http://www.facebook.com/share.php?u=".concat(
+                      encodeURIComponent(location.href)
+                    ),
+                    "_blank",
+                    "toolbar=yes,location=yes,directories=no,status=no,menubar=yes,scrollbars=yes,resizable=no,copyhistory=yes,width=600,height=400"
+                  );
+                });
+              </script>
+            </div>
+            <div class="col-works-2col-right">
+              <img src="images/work-2-09-1.jpg" alt="展場呈現1" />
+              <img src="images/work-2-09-2.jpg" alt="展場呈現2" />
+              <img src="images/work-2-09-3.jpg" alt="展場呈現3" />
+              <img src="images/work-2-09-4.jpg" alt="展場呈現4" />
+              <img src="images/work-2-09-5.jpg" alt="展場平面1" />
+              <img src="images/work-2-09-6.jpg" alt="展場平面2" />
+              <img src="images/work-2-09-7.jpg" alt="UL網頁製作" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- new-footer -->
+    <footer>
+      <!-- load footer.html -->
+    </footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151326905-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151326905-1");
+    </script>
+    <!-- 引入用共header&footer -->
+    <script>
+      $(document).ready(function () {
+        //在指定位置載入指定檔案的內容
+        $("header").load("header.html");
+        $("footer").load("footer.html");
+      });
+    </script>
+  </body>
+</html>
