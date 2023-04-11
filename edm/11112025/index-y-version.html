@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		利用 Python 做陣列天線波束計算及優化
+	</title>
+</head>
+
+<body style="background-color:#C6C6C6;padding:0px; margin:0; border-spacing:0px;">
+	<table align="center" border="0" cellpadding="0" cellspacing="0"
+		style="margin: 0 auto; padding: 0; text-align:center; padding:29px 0px;" width="600">
+		<tr>
+			<td height="12">
+				<span
+					style="font-size:10px;font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; color: #000000;">若網頁無法正常顯示，請點選
+						<a
+						href="https://www.ansys.com.tw/edm/11112025/index.html" style="text-decoration: underline"
+						target="_blank">
+						<span style="text-decoration: underline">這裡</span>
+						</a>
+				</span>
+			</td>
+		</tr>
+	</table>
+
+	<table align="center" border="0" cellpadding="0" cellspacing="0"
+		style="margin: 0 auto; padding: 0; border-spacing:0px; font-size: 13px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; text-align: justify;text-justify: distribute; background: #fff; border-collapse:collapse; line-height:15px;"
+		width="600">
+		<tr>
+			<td style="max-width:600px;">
+				<!-- navbar -->
+				<a href="https://www.ansys.com" style="outline:0; border:0;" target="_blank"><img alt="Ansys 官網"
+						src="https://www.ansys.com.tw/edm/11112025/images/navbar.png" style="outline:0;border:0; vertical-align:top;"
+						width="600"></a><br>
+				<!-- banner -->
+				<a href="https://www.ansys.com/" target="_blank"><img alt="Ansys 2022Q1 線上訓練課程"
+						src="https://www.ansys.com.tw/edm/11112025/images/banner.png" style="outline: 0; border: 0;" width="600"></a>
+
+				<!-- 3張圖 -->
+				<!-- <table class="row" width="100%" align="center" role="presentation" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed">
+					<tbody class="row__body">
+						<tr class="row__row">
+							<td width="33%" align="left" valign="top" class="row__column mobile-bottom-m col-33" style="width:33%;padding-left:45px;padding-right:20px ;padding-top: 30px;">
+								<img class="img_block" border="0" width="140" src="https://www.ansys.com.tw/edm/11112025/images/台北場.png" style="display:block;max-width:140px" />
+							</td>
+							<td width="33%" align="left" valign="top" class="row__column mobile-bottom-m col-33" style="width:33%;padding-left:20px;padding-right:20px;padding-top: 30px;">
+								<img class="img_block" border="0" width="140" src="https://www.ansys.com.tw/edm/11112025/images/台北場.png" style="display:block;max-width:140px" />
+							</td>
+							<td width="33%" align="left" valign="top" class="row__column mobile-bottom-m col-33" style="width:33%;padding-left:20px;padding-right:45px ;padding-top: 30px;">
+								<img class="img_block" border="0" width="140" src="https://www.ansys.com.tw/edm/11112025/images/台北場.png" style="display:block;max-width:140px" />
+							</td>
+						</tr>
+					</tbody>
+				</table>			 -->
+
+				<!-- 內文 -->		
+				<table align="center" border="0" cellpadding="0" cellspacing="0" style=" display:block; border-collapse:collapse;" width="600">
+					<!-- 空格padding -->
+					<tr>
+						<td>
+							<br>&nbsp;
+						</td>
+					</tr>
+
+					<!-- 場次＊３ -->
+					<tr>
+						<td width="30"></td>
+						<td width="140" align="center">
+							<img class="img_block" border="0" width="500" src="https://www.ansys.com.tw/edm/11112025/images/location3.png" style="display:block;max-width:500px" />
+						</td>
+						<td width="30">
+						</td>
+					</tr>
+					<!-- 內文 -->
+					<tr>
+						<td width="30"></td>
+						<td
+							style="font-size:15px; line-height:26px; padding: 20px 0px 0 0px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif;  color: #000000;"
+							valign="top" width="540">
+						
+							陣列天線設計需要評估多個天線單元輻射所組成的波束特性，像是天線增益及涵蓋範圍等等。這些特性需要大量的矩陣運算並搭配最佳化演算法才能有效的優化天線設計。我們可以將遠場資料從 HFSS 當中擷取出來之後放到 Python 程式當中做矩陣運算並搭配資料視覺化來加速陣列天線特行評估及開發。
+								<br><br>
+							Python 是強大的程式語言，搭配 Numpy、Scipy 及 Matplotlib 等模組可以協助工程人員快速完成複雜的科學數據計算及資料處理。
+							<br>
+							<br>
+							
+							<!-- bullet -->
+							<table style=" font-family: 微軟正黑體, sans-serif; font-size:16px; line-height:23px; ">
+								<tr>
+									<td width="10" style="vertical-align: top;">•</td>
+									<td>Python 程式介紹</td>
+								</tr>
+								<tr>
+									<td width="10" style="vertical-align: top;">•</td>
+									<td>Python 擷取 HFSS 遠場矩陣</td>
+								</tr>
+								<tr>
+									<td width="10" style="vertical-align: top;">•</td>
+									<td>利用 Python 矩陣運算輸出波束空間電磁場分布圖</td>
+								</tr>
+								<tr>
+									<td width="10" style="vertical-align: top;">•</td>
+									<td>加入 Scipy 最佳化演算法來優化天線表現</td>
+								</tr>
+							</table>
+						</td>
+						<td width="30"></td>
+					</tr>
+							<!-- padding -->
+					<tr>
+						<td>
+							<br>&nbsp;<br>&nbsp;
+						</td>
+					</tr>
+					<!-- 台北場 -->
+					<tr>
+						<td width="30"></td>
+						<td
+							style="font-size:15px; line-height:26px; padding: 5px 0px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; background-color:#5E5D5D; color:#fff; text-align: center;"
+							valign="top" width="540">
+							<b>台北場</b>
+						</td>
+						<td width="30"></td>
+					</tr>
+					<tr>
+						<td width="30"></td>
+						<td
+							style="font-size:15px; line-height:26px; padding: 20px 0px 0 0px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; color: #000000; "
+							valign="top" width="540">
+							日期：2023/02/15 <br>
+							時間：09:00 – 12:00 <br>
+							地點：台北恆逸教育訓練中心  <br>
+							(台北市松山區復興北路99號12樓至14樓) <br> 
+							<!-- blank -->
+							<img class="img_block" border="0" width="530" src="https://www.ansys.com.tw/edm/11112025/images/blank-5.png" style="display:block;max-width:530px" />
+							<!-- 立即報名 -->
+							<a  target="_blank" href="">
+								<img class="img_block" border="0" width="110" src="https://www.ansys.com.tw/edm/11112025/images/btn.png" style="display:block;max-width:110px" />
+							<br>
+							<br>
+						</td>
+						<td width="30"></td>
+					</tr>
+					<!-- blank -->
+					<tr>
+						<td width="30"></td>
+						<td>
+								<img class="img_block" border="0" width="530" src="https://www.ansys.com.tw/edm/11112025/images/blank-15.png" style="display:block;max-width:530px" />
+						</td>
+						<td width="30"></td>
+					</tr>
+
+					<!-- 新竹場-->
+					<tr>
+						<td width="30"></td>
+						<td
+							style="font-size:15px; line-height:26px; padding: 5px 0px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; background-color:#5E5D5D; color:#fff; text-align: center;"
+							valign="top" width="540">
+							<b>新竹場</b>
+						</td>
+						<td width="30"></td>
+					</tr>
+					<tr>
+						<td width="30"></td>
+						<td
+							style="font-size:15px; line-height:26px; padding: 20px 0px 0 0px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif;  color: #000000;  "
+							valign="top" width="540">
+							日期：2023/02/22 <br>
+							時間：09:00 – 12:00 <br>
+							地點：新竹恆逸教育訓練中心  <br>
+							(新竹市東區光復路二段295號3樓之2) <br> 
+							<!-- blank -->
+							<img class="img_block" border="0" width="530" src="https://www.ansys.com.tw/edm/11112025/images/blank-5.png" style="display:block;max-width:530px" />
+							<!-- 立即報名 -->
+							<a  target="_blank" href="">
+								<img class="img_block" border="0" width="110" src="https://www.ansys.com.tw/edm/11112025/images/btn.png" style="display:block;max-width:110px" />
+							<br>
+							<br>
+						</td>
+						<td width="30"></td>
+					</tr>
+					<!-- blank -->
+					<tr>
+						<td width="30"></td>
+						<td>
+								<img class="img_block" border="0" width="530" src="https://www.ansys.com.tw/edm/11112025/images/blank-15.png" style="display:block;max-width:530px" />
+						</td>
+						<td width="30"></td>
+					</tr>
+
+					<!-- 高雄場-->
+					<tr>
+						<td width="30"></td>
+						<td
+							style="font-size:15px; line-height:26px; padding: 5px 0px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; background-color:#5E5D5D; color:#fff; text-align: center;"
+							valign="top" width="540">
+							<b>高雄場</b>
+						</td>
+						<td width="30"></td>
+					</tr>
+					<tr>
+						<td width="30"></td>
+						<td
+							style="font-size:15px; line-height:26px; padding: 20px 0px 0 0px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif;   color: #000000; "
+							valign="top" width="540">
+							日期：2023/03/07 <br>
+							時間：09:00 – 12:00 <br>
+							地點：高雄恆逸教育訓練中心  <br>
+							(高雄市前鎮區中山二路2號25樓) <br> 
+							<!-- blank -->
+							<img class="img_block" border="0" width="530" src="https://www.ansys.com.tw/edm/11112025/images/blank-5.png" style="display:block;max-width:530px" />
+							<!-- 立即報名 -->
+							<a  target="_blank" href="">
+								<img class="img_block" border="0" width="110" src="https://www.ansys.com.tw/edm/11112025/images/btn.png" style="display:block;max-width:110px" />
+							<br>
+							<br>
+
+							<!-- 主辦單位保留議程更動之權利，最終議程以活動當天公佈為準。 -->
+							<!-- <p style="text-decoration:none !important; font-size: 10px; line-height: 18px;font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; color: #000000";" >
+							*主辦單位保留議程更動之權利，最終議程以活動當天公佈為準。
+							</p> -->
+						</td>
+						<td width="30"></td>
+					</tr>
+				</table>
+	
+
+				<!-- 主辦單位保留議程更動之權利，最終議程以活動當天公佈為準。 -->
+				<p style="text-decoration:none !important; font-size: 10px; line-height: 18px;font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif;  padding-left: 20px ;color: #000000"; " >
+					&emsp;&emsp;&emsp;*主辦單位保留議程更動之權利，最終議程以活動當天公佈為準。
+				</p>
+
+				<!-- footer -->
+				<table bgcolor="#AAAAAA" cellpadding="0" cellspacing="0"
+					style="font-size: 10px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif;" width="600">
+					<tr>
+						<td
+							style="font-size:10px; background-color: #aaa; color:#000000; padding:15px 50px; line-height:16px; font-family: 微軟正黑體, 'Microsoft JhengHei', Arial, Helvetica, sans-serif; margin:auto; text-align:center;"
+							width="600px">
+							<p>
+								© 2023 Ansys, Inc. All Rights Reserved.<br>
+								This email was sent by: ANSYS, Inc.<br>
+								2600 Ansys Drive<br>
+								Canonsburg, PA 15317, United States of America;<br>
+							</p><a href="https://www.ansys.com/footer/privacy-notice" style="text-decoration:none; color:#000000;"
+								target="_blank">Privacy Notice</a> | <a
+								href="https://www.ansys.com/-/media/ansys/corporate/files/pdf/footer/ansys-trademark-usage-guidelines.pdf?la=en"
+								style="text-decoration:none; color:#000000;" target="_blank">Trademark Statement</a>
+						</td>
+					</tr>
+				</table>
+
+				<table style="display:block; padding:0; margin:0; text-align: left; outline:0; border:0;"></table>
+				
+			</td>
+		</tr>
+	</table>
+	<!-- inner container -->
+	<!-- container width 700px -->
+</body>
+
+</html>
